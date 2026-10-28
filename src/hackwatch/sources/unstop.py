@@ -12,6 +12,17 @@ HEADERS = {"User-Agent": "hackwatch/0.1 (veille perso de hackathons ; usage non 
            "Accept": "application/json"}
 MAX_PAGES = 5
 PER_PAGE = 50
+# Éligibilité : l'API n'expose aucun pays admis (eligibility.locations est toujours vide), donc on déduit
+# des indices dans le titre, la description et l'organisateur. Plateforme indienne : par défaut, un
+# événement sans signal « international » et avec un indice indien / universitaire / en roupies est écarté.
+INDIA = re.compile(r"India(?:n)?|IIT|NIT|IIM|IIIT|Bharat|Lakhs?|crore"
+                   r"|₹|Rs\.?\s|national", re.I)
+INDIA_STRONG = re.compile(r"India(?:n)?|IIT|NIT|IIM|IIIT|Bharat|Lakhs?|₹", re.I)
+GLOBAL = re.compile(r"global(?:ly)?|international(?:ly)?|worldwide|open to all|any country"
+                    r"|all countries|from anywhere|across the world|participants? from (?:any|all)", re.I)
+ACADEMIC = re.compile(r"institut|college|universit|school|IIT|NIT|academy|polytechnic|VIT", re.I)
+ONLY_FOR = re.compile(r"(?:only|exclusively|exclusive)\s+(?:for|to|open to)\s+(?:the\s+)?(?:\w+\s+){0,3}"
+                      r"(?:students|college|university|institute)|students of (?:the )?[A-Z]", re.I)
 CURRENCIES = {"fa-rupee": "₹", "fa-dollar": "$", "fa-euro": "€"}
 
 
@@ -44,14 +55,34 @@ def _location(item: dict) -> str:
     return ", ".join(p for p in (addr.get("address"), addr.get("city"), addr.get("state"), country) if p)
 
 
+def is_restricted(x: dict) -> bool:
+    """Réservé à l'Inde, à un établissement ou à des étudiants d'un autre pays (déduit, voir INDIA)."""
+    text = f"{x.get('title', '')} {_plain(x.get('details'))}"
+    org = (x.get("organisation") or {}).get("name", "")
+    glob = bool(GLOBAL.search(text))
+    academic = bool(ACADEMIC.search(org))
+    rupee = any(p.get("currency") == "fa-rupee" for p in x.get("prizes") or [])
+    if ONLY_FOR.search(text):
+        return True
+    if not glob:
+        return bool(INDIA.search(text)) or academic or rupee
+    return bool(INDIA_STRONG.search(f"{text} {org}")) and (academic or rupee)
+
+
+def _plain(html: str | None) -> str:
+    return re.sub(r"\s+", " ", re.sub(r"<[^>]+>", " ", html or "")).strip()
+
+
 def parse(data: dict, now: datetime | None = None) -> list[Hackathon]:
-    """Réponse de search-result. region : online / offline / hybrid. Seul « online » est marqué en
+    """Réponse de search-result, sans les événements réservés (is_restricted). region : online / offline / hybrid. Seul « online » est marqué en
     ligne ; un hybride garde son lieu brut (doute : pas en ligne)."""
     now = now or datetime.now(timezone.utc).replace(tzinfo=None)
     out = []
     for x in data["data"]["data"]:
+        if is_restricted(x):
+            continue
         reg_end = _dt((x.get("regnRequirements") or {}).get("end_regn_dt"))
-        text = re.sub(r"\s+", " ", re.sub(r"<[^>]+>", " ", x.get("details") or "")).strip()
+        text = _plain(x.get("details"))
         org = (x.get("organisation") or {}).get("name", "")
         out.append(
             Hackathon(

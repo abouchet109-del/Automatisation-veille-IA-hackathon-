@@ -139,15 +139,32 @@ def test_devfolio_registration_closed():
 
 
 def test_unstop_parse():
-    items = unstop.parse(load("unstop.json"), now=datetime(2026, 10, 28))
-    assert len(items) == 4
+    data = load("unstop.json")
+    assert len(data["data"]["data"]) == 7
+    items = unstop.parse(data, now=datetime(2026, 10, 28))
+    assert len(items) == 4  # 3 événements réservés (Inde / établissement) écartés
+    titles = " ".join(h.title for h in items)
+    assert "Pixels To Prognosis" not in titles and "K Hacks" not in titles and "Hacksprint" not in titles
     online = [h for h in items if h.is_online]
-    assert len(online) == 2 and all(h.location == "Online" for h in online)
+    assert len(online) == 3 and all(h.location == "Online" for h in online)
     assert all(h.registration_open and h.url.startswith("https://unstop.com/") for h in items)
-    assert any(h.prize for h in items) and all("<" not in h.description for h in items)
-    # présentiel / hybride : lieu brut, jamais marqués en ligne
-    assert all(not h.is_online and h.location for h in items if h not in online)
-    assert [h.is_online for h in items if filters.keep(h)] == [True, True]
+    assert all("<" not in h.description for h in items)
+    # présentiel : lieu brut en Inde, jamais marqué en ligne ni retenu par le filtre
+    offline = [h for h in items if not h.is_online]
+    assert len(offline) == 1 and offline[0].location and not filters.keep(offline[0])
+
+
+def test_unstop_prize_and_restriction_rules():
+    x = load("unstop.json")["data"]["data"][4]  # Pixels To Prognosis : IIT, roupies
+    assert unstop._prize(x["prizes"]).startswith("₹")
+    assert unstop.is_restricted(x)
+    x["title"] += " - open to all, global"
+    x["organisation"]["name"] = "Quelque Association"
+    x["prizes"][0]["currency"] = "fa-dollar"
+    x["details"] = "Global online hackathon."
+    assert not unstop.is_restricted(x)
+    x["details"] = "Open only for students of IIT Madras."
+    assert unstop.is_restricted(x)
 
 
 def test_unstop_registration_closed():

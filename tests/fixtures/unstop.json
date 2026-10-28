@@ -5,6 +5,547 @@
   "per_page": 50,
   "data": [
    {
+    "id": 1778754,
+    "public_url": "hackathons/bug-bounty-oronzo-llp-1778754",
+    "title": "Bug Bounty",
+    "organization_id": 2113809,
+    "type": "hackathons",
+    "subtype": "online_coding_challenge",
+    "regn_open": 1,
+    "updated_at": "2026-10-27T13:19:08+05:30",
+    "region": "online",
+    "visibility": "public",
+    "details": "<h2>F-Cube Bug Bounty | Discover. Report. Improve.</h2>\n<p>Join the F-Cube Bug Bounty, hosted by Oronzo LLP, and help us make F-Cube safer, more reliable, and easier to use.</p>\n<p><span style=\"text-decoration: underline;\">https://chat.whatsapp.com/DA85Ghe57vnGZ8SAV5gv6r</span></p>\n<p>Explore the app, identify bugs and vulnerabilities within the authorized scope, and submit clear reports to help improve app security, functionality, performance, and user experience.</p>\n<ul>\n<li><strong>Organized by</strong>: Oronzo LLP</li>\n<li><strong>Event Dates</strong>: November 6&ndash;8, 2026.</li>\n<li><strong>Mode</strong>: Completely Online️</li>\n<li><strong>Entry</strong>: Free</li>\n<li><strong>Reward</strong>: Top contributors will have an opportunity to be considered for paid internships at Oronzo LLP.</li>\n</ul>\n<p><strong>Event Schedule:</strong></p>\n<p><strong>Friday, November 6 | 6:00 PM IST</strong></p>\n<p>Kickoff Meeting &amp; Walkthrough</p>\n<p>Join the online kickoff session to understand the event objectives, authorized testing scope, participation guidelines, and bug submission process.</p>\n<p><strong>Saturday, November 7 | Bug Hunting Begins</strong></p>\n<p>Test permitted F-Cube features, identify bugs, document findings, and submit reports with clear reproduction steps and supporting evidence.</p>\n<p><strong>Sunday, November 8 | Final Testing &amp; Submission</strong></p>\n<p>Complete your testing and submit all bug reports before the final deadline.</p>\n<p><strong>Submission Deadline: </strong>Sunday, November 8, at 9:00 PM IST.</p>\n<p><strong>Areas to Explore:</strong></p>\n<ul>\n<li><strong>App Security:</strong> Identify potential security vulnerabilities within the authorized scope.</li>\n<li><strong>Feature &amp; Functional Bugs:</strong> Report broken features, errors, and unexpected behavior.</li>\n<li><strong>Performance &amp; Reliability:</strong> Identify slow responses, crashes, and reliability issues.</li>\n<li data-pm-slice=\"1 1 []\"><strong>UI/UX Issues:</strong> Highlight usability, navigation, and interface problems.</li>\n</ul>\n<p><strong>Rewards &amp; Recognition:</strong></p>\n<p>Top contributors will have an opportunity to be considered for paid internships at Oronzo LLP. Submissions will be reviewed based on validity, impact, reproducibility, and duplicate checks. Internship opportunities are subject to the organizers' evaluation and selection process.</p>\n<p><strong>Participation Guidelines:</strong></p>\n<ul>\n<li>\n<p>Test only F-Cube assets and features explicitly authorized by the organizers.</p>\n</li>\n<li>\n<p>Submit genuine findings with clear reproduction steps and relevant evidence.</p>\n</li>\n<li>\n<p>Never access other users' private data or accounts.</p>\n</li>\n<li>\n<p>Do not perform denial-of-service attacks, destructive testing, spam, or social engineering.</p>\n</li>\n<li>\n<p>Keep findings private and follow the organizers' responsible disclosure guidelines.</p>\n</li>\n<li>\n<p>All submissions are subject to review, validat",
+    "short_id": "A9BntRk",
+    "organisation": {
+     "id": 2113809,
+     "name": "Oronzo LLP",
+     "public_url": "c/oronzo-llp-2113809",
+     "logoUrl": "",
+     "logoUrl2": "",
+     "show_evaluator_login_link": false,
+     "official_email_domains": null,
+     "tier": null
+    },
+    "seo_url": "https://unstop.com/hackathons/bug-bounty-oronzo-llp-1778754",
+    "status": "LIVE",
+    "tags": [],
+    "isPaid": false,
+    "festival": null,
+    "prizes": [],
+    "address_with_country_logo": {
+     "id": 1877271,
+     "address": "",
+     "city": "",
+     "state": "",
+     "country": null,
+     "zip": null,
+     "lat": null,
+     "lng": null,
+     "addressable_id": 1778754,
+     "addressable_type": "App\\Model\\Opportunity",
+     "created_at": "2026-10-26T19:07:13+05:30",
+     "updated_at": "2026-10-27T00:04:44+05:30",
+     "deleted_at": null,
+     "address_title": "event_location",
+     "city_id": null,
+     "sort_order": 1,
+     "state_code": null,
+     "country_code": null
+    },
+    "short_url": "https://unstop.com/o/A9BntRk",
+    "assignedTag": {
+     "tag": null
+    },
+    "required_skills": [
+     {
+      "id": 647718,
+      "skill": "Web Application Security Testing",
+      "skill_name": "Web Application Security Testing",
+      "pivot": {
+       "entity_id": 1778754,
+       "subject_id": 647718,
+       "id": 6676520,
+       "ai_generated": true
+      }
+     },
+     {
+      "id": 647699,
+      "skill": "Vulnerability Assessment",
+      "skill_name": "Vulnerability Assessment",
+      "pivot": {
+       "entity_id": 1778754,
+       "subject_id": 647699,
+       "id": 6676521,
+       "ai_generated": true
+      }
+     },
+     {
+      "id": 644305,
+      "skill": "Manual Testing",
+      "skill_name": "Manual Testing",
+      "pivot": {
+       "entity_id": 1778754,
+       "subject_id": 644305,
+       "id": 6676522,
+       "ai_generated": true
+      }
+     },
+     {
+      "id": 647361,
+      "skill": "Software Quality Assurance (QA)",
+      "skill_name": "Software Quality Assurance (QA)",
+      "pivot": {
+       "entity_id": 1778754,
+       "subject_id": 647361,
+       "id": 6676523,
+       "ai_generated": true
+      }
+     },
+     {
+      "id": 645284,
+      "skill": "Usability Testing",
+      "skill_name": "Usability Testing",
+      "pivot": {
+       "entity_id": 1778754,
+       "subject_id": 645284,
+       "id": 6676524,
+       "ai_generated": true
+      }
+     }
+    ],
+    "locations": [],
+    "end_date": "2026-11-08T23:59:00+05:30",
+    "approved_date": "2026-10-27 00:05:18 GMT+0530",
+    "viewsCount": 3526,
+    "registerCount": 129,
+    "regnRequirements": {
+     "opportunity_id": 1778754,
+     "start_regn_dt": "2026-10-26T00:00:00+05:30",
+     "end_regn_dt": "2026-11-06T23:59:00+05:30",
+     "show_deadline": 1,
+     "min_team_size": 1,
+     "max_team_size": 1,
+     "work_location_type": "city",
+     "eligibility": null,
+     "reg_status": "STARTED",
+     "remainingDaysArray": {
+      "durations": 9,
+      "text": " days left"
+     },
+     "remain_days": "9 days left",
+     "remaining_time": 807507
+    }
+   },
+   {
+    "id": 1775195,
+    "public_url": "hackathons/ctf-iiitdm-kancheepuram-1775195",
+    "title": "CTF",
+    "organization_id": 1161369,
+    "type": "hackathons",
+    "subtype": "online_coding_challenge",
+    "regn_open": 1,
+    "updated_at": "2026-10-27T20:51:51+05:30",
+    "region": "online",
+    "visibility": "public",
+    "details": "<p><strong>About</strong></p>\n<p>A beginner-friendly online boot2root CTF. Each team gets a vulnerable virtual machine (OVA) to run locally. Your job is to find your way in, escalate privileges to root, and capture the flags along the way.&nbsp;</p>\n<p><strong>Format and Schedule</strong></p>\n<ul dir=\"ltr\">\n<li>Mode: Online (the VM runs on your own machine)</li>\n<li>Date: 29 October 2026</li>\n<li>Start: 6:00 PM IST</li>\n</ul>\n<p><strong>Eligibility</strong></p>\n<ul dir=\"ltr\">\n<li>Open to all college students</li>\n<li>Inter-college teams: allowed</li>\n<li>Team size: up to 3 members&nbsp;</li>\n<li>Each person can be on only one team</li>\n</ul>\n<p><strong>How it works</strong></p>\n<ul dir=\"ltr\">\n<li>Register on Unstop.</li>\n<li>The encrypted OVA download link will be shared on 29th so you can download it before the event. The password will be released at 6:00 PM on 29 October.</li>\n<li>Import the OVA into VirtualBox or VMware, find the target IP, and start hacking.</li>\n<li>Submit flags on the CTF platform(The URL will also be given on the day of the event). The scoreboard updates live.</li>\n</ul>\n<p><strong>System requirements</strong></p>\n<ul dir=\"ltr\">\n<li>VirtualBox or VMware (latest version)</li>\n<li>An attacker machine of your choice (Kali Linux, Parrot, or your own setup)</li>\n</ul>\n<p><strong>Rules</strong></p>\n<ul dir=\"ltr\">\n<li>Internet access and public tools are allowed.</li>\n<li>Do not share flags, hints, or solutions with other teams during the event. Collusion leads to disqualification.</li>\n<li>Attack only your own local VM. Do not attack the CTF platform, other participants, or any other infrastructure.</li>\n<li>Do not attempt to brute-force or spam the flag submission page.</li>\n<li>Do not publish writeups or walkthroughs until the organizers announce the event is over.</li>\n<li>Flag format: <code dir=\"ltr\">[flag format, e.g. CTF{...}]</code></li>\n<li>Ranking: by number of points, ties broken by who reached the score first.</li>\n<li>Organizers&rsquo; decisions are final. Any rule violation can lead to disqualification.</li>\n<li>If your VM breaks, re-import the original OVA. Contact the organizers if something is wrong with the machine itself.</li>\n<li><span class=\"rQesXe MPyX\" style=\"font-family: Google Sans, sans-serif; font-size: 16px; margin: 0px; text-decoration: none; border-bottom: 0px #e6e8f0;\"><span class=\"rQesXe MPyX\" style=\"font-family: Google Sans, sans-serif; font-size: 16px; margin: 0px; text-decoration: none; border-bottom: 0px #e6e8f0;\"><span style=\"font-family: Google Sans, sans-serif; font-size: 16px; margin: 0px; text-decoration: none; border-bottom: 0px #e6e8f0;\" data-subtree=\"aimfl\" data-processed=\"true\" aria-owns=\"action-menu-parent-container\">winners must submit a brief write-up explaining their CTF solution. Prizes will be awarded only after verifying that no malpractice occured.&nbsp;</span></span></span><span style=\"text-decoration: underline;\"><strong><span class=\"rQesXe MPyX\" style=\"font-family: Google Sa",
+    "short_id": "47Omf6v",
+    "organisation": {
+     "id": 1161369,
+     "name": "IIITDM Kancheepuram",
+     "public_url": "c/iiitdm-kancheepuram-recruiter-career-interview-selection-process-job-profile-articles-videos-1161369",
+     "logoUrl": "",
+     "logoUrl2": "",
+     "show_evaluator_login_link": false,
+     "official_email_domains": null,
+     "tier": null
+    },
+    "seo_url": "https://unstop.com/hackathons/ctf-iiitdm-kancheepuram-1775195",
+    "status": "LIVE",
+    "tags": [],
+    "isPaid": false,
+    "festival": null,
+    "prizes": [],
+    "address_with_country_logo": {
+     "id": 1874030,
+     "address": "",
+     "city": "",
+     "state": "",
+     "country": null,
+     "zip": null,
+     "lat": null,
+     "lng": null,
+     "addressable_id": 1775195,
+     "addressable_type": "App\\Model\\Opportunity",
+     "created_at": "2026-10-24T22:49:51+05:30",
+     "updated_at": "2026-10-27T20:51:51+05:30",
+     "deleted_at": null,
+     "address_title": "event_location",
+     "city_id": null,
+     "sort_order": 1,
+     "state_code": null,
+     "country_code": null
+    },
+    "short_url": "https://unstop.com/o/47Omf6v",
+    "assignedTag": {
+     "tag": null
+    },
+    "required_skills": [
+     {
+      "id": 643780,
+      "skill": "Ethical Hacking",
+      "skill_name": "Ethical Hacking",
+      "pivot": {
+       "entity_id": 1775195,
+       "subject_id": 643780,
+       "id": 6689312,
+       "ai_generated": true
+      }
+     },
+     {
+      "id": 647699,
+      "skill": "Vulnerability Assessment",
+      "skill_name": "Vulnerability Assessment",
+      "pivot": {
+       "entity_id": 1775195,
+       "subject_id": 647699,
+       "id": 6689313,
+       "ai_generated": true
+      }
+     },
+     {
+      "id": 646593,
+      "skill": "Linux/Unix System Administration",
+      "skill_name": "Linux/Unix System Administration",
+      "pivot": {
+       "entity_id": 1775195,
+       "subject_id": 646593,
+       "id": 6689314,
+       "ai_generated": true
+      }
+     },
+     {
+      "id": 645339,
+      "skill": "Virtual Machine Management",
+      "skill_name": "Virtual Machine Management",
+      "pivot": {
+       "entity_id": 1775195,
+       "subject_id": 645339,
+       "id": 6689315,
+       "ai_generated": true
+      }
+     },
+     {
+      "id": 644476,
+      "skill": "Network Troubleshooting",
+      "skill_name": "Network Troubleshooting",
+      "pivot": {
+       "entity_id": 1775195,
+       "subject_id": 644476,
+       "id": 6689316,
+       "ai_generated": true
+      }
+     }
+    ],
+    "locations": [],
+    "end_date": "2026-10-28T23:59:00+05:30",
+    "approved_date": "2026-10-24 23:14:57 GMT+0530",
+    "viewsCount": 1088,
+    "registerCount": 118,
+    "regnRequirements": {
+     "opportunity_id": 1775195,
+     "start_regn_dt": "2026-10-24T00:00:00+05:30",
+     "end_regn_dt": "2026-10-28T23:59:00+05:30",
+     "show_deadline": 1,
+     "min_team_size": 1,
+     "max_team_size": 3,
+     "work_location_type": "city",
+     "eligibility": "{\"sector\":[\"students\"],\"engineering\":[],\"bSchools\":[],\"arts\":[],\"medicine\":[],\"law\":[],\"others\":[\"all\"],\"experience\":[\"all\"],\"studentPassoutYearsSelected\":[\"all\"],\"fresherPassoutYearsSelected\":[\"all\"],\"schoolFilteredClasses\":[\"all\"],\"minMarks\":{\"high_school_perc\":0,\"high_school_cgpa\":0},\"locations\":[],\"location_type\":\"all\",\"professionalEligibility\":null,\"fresherEligibility\":null}",
+     "reg_status": "STARTED",
+     "remainingDaysArray": {
+      "durations": "8",
+      "text": "hours left"
+     },
+     "remain_days": "8 hours left",
+     "remaining_time": 30100
+    }
+   },
+   {
+    "id": 1770609,
+    "public_url": "hackathons/wh-versehack-writers-haven-1770609",
+    "title": "WH Versehack",
+    "organization_id": 2096627,
+    "type": "hackathons",
+    "subtype": "online_coding_challenge",
+    "regn_open": 1,
+    "updated_at": "2026-10-27T19:06:37+05:30",
+    "region": "online",
+    "visibility": "public",
+    "details": "<p><strong>VERSEHACK: WRITERS&rsquo; HAVEN</strong></p>\n<p><strong>An Online Hackathon by Writers&rsquo; Haven</strong></p>\n<p><strong>About the Hackathon:</strong></p>\n<p>VerseHack: Writers&rsquo; Haven is an online hackathon that brings together young innovators, developers, writers, designers, and problem-solvers to create meaningful digital solutions for real-world challenges.</p>\n<p>The hackathon encourages participants to combine technology, creativity, critical thinking, and social awareness to develop innovative ideas and turn them into working projects. Participants will explore challenges related to digital culture, information integrity, democracy, accessibility, and equal opportunities.</p>\n<p>Whether you are a beginner with a promising idea or an experienced builder, VerseHack is an opportunity to learn, collaborate, innovate, and showcase your creativity.</p>\n<p><strong>Tracks:</strong></p>\n<p><strong>Participants can develop their projects under any ONE of the following tracks:</strong></p>\n<ul data-spread=\"false\">\n<li><strong>Digital Creativity &amp; Culture:</strong> Use technology to preserve culture, empower creative expression, and make digital experiences more meaningful.</li>\n<li><strong>Truth in the Digital Age:</strong> Develop solutions addressing misinformation, digital literacy, online trust, and responsible information sharing.</li>\n<li><strong>Democracy, Dialogue &amp; Diplomacy:</strong> Build tools that encourage constructive dialogue, civic participation, collaboration, and peaceful problem-solving.</li>\n<li><strong>Opportunity Without Barriers:</strong> Create inclusive digital solutions that improve accessibility and expand opportunities for underserved communities.</li>\n</ul>\n<p><strong>Eligibility:</strong></p>\n<ul data-spread=\"false\">\n<li>Open to participants under 20 years of age.</li>\n<li>School and college students are welcome to participate.</li>\n<li>Participants may register individually or form teams of 2&ndash;3 members.</li>\n<li>Inter-college teams are allowed.</li>\n<li>Team members may belong to different academic specializations or disciplines.</li>\n<li>Participants from different educational backgrounds are encouraged to collaborate.</li>\n<li>This is an online hackathon. Participants can work remotely.</li>\n</ul>\n<p><strong>Hackathon Format:</strong></p>\n<p>VerseHack will be conducted in two rounds.</p>\n<p><strong>Round 1: Idea Development and Evaluation | 15 Days&nbsp;</strong></p>\n<p><strong>Date: 15 October 2026 - 30 October 2026</strong></p>\n<ul data-spread=\"false\">\n<li>Participants identify a problem relevant to their chosen track.</li>\n<li>Develop an innovative project idea and explain the problem, proposed solution, target users, and expected impact.</li>\n<li>Submit the required idea proposal through the official submission process.</li>\n<li>Entries will be evaluated, and selected participants will advance to the next round.</li>\n</ul>\n<p><strong>Round 2: Building and Development | 8 Days</st",
+    "short_id": "oSVCLvO",
+    "organisation": {
+     "id": 2096627,
+     "name": "Writers Haven",
+     "public_url": "c/writers-haven-2096627",
+     "logoUrl": "https://d8it4huxumps7.cloudfront.net/images/partners/new_organisation_image-oV7QpqxAim778008067DKyOhAFP0B.png",
+     "logoUrl2": "https://d8it4huxumps7.cloudfront.net/images/partners/new_organisation_image-oV7QpqxAim778008067DKyOhAFP0B.png",
+     "show_evaluator_login_link": false,
+     "official_email_domains": null,
+     "tier": null
+    },
+    "seo_url": "https://unstop.com/hackathons/wh-versehack-writers-haven-1770609",
+    "status": "LIVE",
+    "tags": [],
+    "isPaid": false,
+    "festival": null,
+    "prizes": [],
+    "address_with_country_logo": {
+     "id": 1867571,
+     "address": "",
+     "city": "",
+     "state": "",
+     "country": null,
+     "zip": null,
+     "lat": null,
+     "lng": null,
+     "addressable_id": 1770609,
+     "addressable_type": "App\\Model\\Opportunity",
+     "created_at": "2026-10-15T10:55:39+05:30",
+     "updated_at": "2026-10-16T12:31:52+05:30",
+     "deleted_at": null,
+     "address_title": "event_location",
+     "city_id": null,
+     "sort_order": 1,
+     "state_code": null,
+     "country_code": null
+    },
+    "short_url": "https://unstop.com/o/oSVCLvO",
+    "assignedTag": {
+     "tag": null
+    },
+    "required_skills": [
+     {
+      "id": 645880,
+      "skill": "Creativity",
+      "skill_name": "Creativity",
+      "pivot": {
+       "entity_id": 1770609,
+       "subject_id": 645880,
+       "id": 6567817,
+       "ai_generated": true
+      }
+     },
+     {
+      "id": 1373,
+      "skill": "Problem Solving",
+      "skill_name": "Problem Solving",
+      "pivot": {
+       "entity_id": 1770609,
+       "subject_id": 1373,
+       "id": 6567818,
+       "ai_generated": true
+      }
+     },
+     {
+      "id": 1301,
+      "skill": "Critical Thinking",
+      "skill_name": "Critical Thinking",
+      "pivot": {
+       "entity_id": 1770609,
+       "subject_id": 1301,
+       "id": 6567819,
+       "ai_generated": true
+      }
+     },
+     {
+      "id": 647511,
+      "skill": "Teamwork and Collaboration",
+      "skill_name": "Teamwork and Collaboration",
+      "pivot": {
+       "entity_id": 1770609,
+       "subject_id": 647511,
+       "id": 6567820,
+       "ai_generated": true
+      }
+     },
+     {
+      "id": 646411,
+      "skill": "Innovation Management",
+      "skill_name": "Innovation Management",
+      "pivot": {
+       "entity_id": 1770609,
+       "subject_id": 646411,
+       "id": 6567821,
+       "ai_generated": true
+      }
+     }
+    ],
+    "locations": [],
+    "end_date": "2026-11-22T23:59:00+05:30",
+    "approved_date": "2026-10-16 12:32:46 GMT+0530",
+    "viewsCount": 7951,
+    "registerCount": 12,
+    "regnRequirements": {
+     "opportunity_id": 1770609,
+     "start_regn_dt": "2026-10-15T12:00:00+05:30",
+     "end_regn_dt": "2026-11-04T23:59:00+05:30",
+     "show_deadline": 1,
+     "min_team_size": 1,
+     "max_team_size": 3,
+     "work_location_type": "city",
+     "eligibility": "{\"sector\":[\"school\",\"students\"],\"engineering\":[],\"bSchools\":[],\"arts\":[],\"medicine\":[],\"law\":[],\"others\":[\"all\"],\"experience\":[\"all\"],\"studentPassoutYearsSelected\":[2029,2030],\"fresherPassoutYearsSelected\":[\"all\"],\"schoolFilteredClasses\":[\"all\"],\"minMarks\":{\"high_school_perc\":0,\"high_school_cgpa\":0},\"locations\":[],\"location_type\":\"all\",\"professionalEligibility\":null,\"fresherEligibility\":null}",
+     "reg_status": "STARTED",
+     "remainingDaysArray": {
+      "durations": 7,
+      "text": " days left"
+     },
+     "remain_days": "7 days left",
+     "remaining_time": 634736
+    }
+   },
+   {
+    "id": 1775961,
+    "public_url": "hackathons/hackcelestia-international-hackathon-banasthali-vidyapith-bu-jaipur-1775961",
+    "title": "HackCelestia — International Hackathon",
+    "organization_id": 138,
+    "type": "hackathons",
+    "subtype": "online_coding_challenge",
+    "regn_open": 1,
+    "updated_at": "2026-10-27T14:10:57+05:30",
+    "region": "offline",
+    "visibility": "public",
+    "details": "<h1>Hack Celestia &mdash; International Hackathon</h1>\n<p><strong>Innovate. Collaborate. Build the Future.</strong></p>\n<h2>About Hack Celestia</h2>\n<p>Hack Celestia is an international hackathon that brings together innovative minds to develop creative, technology-driven solutions to real-world challenges. It provides a platform to showcase technical skills, creativity, teamwork, and problem-solving abilities.</p>\n<h2>Eligibility</h2>\n<ul>\n<li>\n<p>Open exclusively to female participants who meet the eligibility criteria.</p>\n</li>\n<li>\n<p>Teams may consist of up to 5 members, as per the official rules.</p>\n</li>\n<li>\n<p>Participants should be interested in technology, innovation, and problem-solving.</p>\n</li>\n</ul>\n<h2>How to Participate</h2>\n<ol start=\"1\">\n<li>\n<p>Register through the official Google Form.</p>\n</li>\n<li>\n<p>Select your preferred track.</p>\n</li>\n<li>\n<p>Submit a brief description of your idea and proposed solution.</p>\n</li>\n<li>\n<p>Provide the required details of all team members.</p>\n</li>\n</ol>\n<h2>Important Date</h2>\n<p><strong>Registration Deadline: 31st&nbsp; October 2026</strong></p>\n<h2>Register Here:</h2>\n<p><a href=\"https://forms.gle/EbFkWiNbUPU4NJ629\">https://forms.gle/EbFkWiNbUPU4NJ629</a></p>\n<h2>For More Information</h2>\n<p>Visit our official website: https://hackcelestia.com/</p>\n<p>For any queries, contact us at: hackcelestia@gmail.com</p>\n<p><strong>Hack Celestia &mdash; Where Brainpower Meets Bold Initiatives!</strong></p>",
+    "short_id": "ImraMZo",
+    "organisation": {
+     "id": 138,
+     "name": "Banasthali Vidyapith (BU), Jaipur",
+     "public_url": "c/banasthali-vidyapith-bu-jaipur-placement-interview-competitions-articles-videos-138",
+     "logoUrl": "https://d8it4huxumps7.cloudfront.net/images/partners/partners75/Banasthali_University.jpg",
+     "logoUrl2": "https://d8it4huxumps7.cloudfront.net/images/partners/partners125/Banasthali_University.jpg",
+     "show_evaluator_login_link": false,
+     "official_email_domains": "@banasthali.ac.in, @banasthali.in",
+     "tier": null
+    },
+    "seo_url": "https://unstop.com/hackathons/hackcelestia-international-hackathon-banasthali-vidyapith-bu-jaipur-1775961",
+    "status": "LIVE",
+    "tags": [],
+    "isPaid": false,
+    "festival": null,
+    "prizes": [],
+    "address_with_country_logo": {
+     "id": 1874709,
+     "address": "Banasthali Vidyapith",
+     "city": "Niwai",
+     "state": "Rajasthan",
+     "country": {
+      "id": 94,
+      "name": "India",
+      "alpha_2": "in",
+      "alpha_3": "ind",
+      "iso": "IN",
+      "iso3": "IND",
+      "numcode": 356,
+      "phonecode": "+91   "
+     },
+     "zip": null,
+     "lat": null,
+     "lng": null,
+     "addressable_id": 1775961,
+     "addressable_type": "App\\Model\\Opportunity",
+     "created_at": "2026-10-25T13:58:39+05:30",
+     "updated_at": "2026-10-27T14:10:57+05:30",
+     "deleted_at": null,
+     "address_title": "event_location",
+     "city_id": 133224,
+     "sort_order": 1,
+     "state_code": null,
+     "country_code": null
+    },
+    "short_url": "https://unstop.com/o/ImraMZo",
+    "assignedTag": {
+     "tag": null
+    },
+    "required_skills": [
+     {
+      "id": 1373,
+      "skill": "Problem Solving",
+      "skill_name": "Problem Solving",
+      "pivot": {
+       "entity_id": 1775961,
+       "subject_id": 1373,
+       "id": 6682537,
+       "ai_generated": true
+      }
+     },
+     {
+      "id": 647511,
+      "skill": "Teamwork and Collaboration",
+      "skill_name": "Teamwork and Collaboration",
+      "pivot": {
+       "entity_id": 1775961,
+       "subject_id": 647511,
+       "id": 6682538,
+       "ai_generated": true
+      }
+     },
+     {
+      "id": 645880,
+      "skill": "Creativity",
+      "skill_name": "Creativity",
+      "pivot": {
+       "entity_id": 1775961,
+       "subject_id": 645880,
+       "id": 6682539,
+       "ai_generated": true
+      }
+     },
+     {
+      "id": 645189,
+      "skill": "Technical Skills",
+      "skill_name": "Technical Skills",
+      "pivot": {
+       "entity_id": 1775961,
+       "subject_id": 645189,
+       "id": 6682540,
+       "ai_generated": true
+      }
+     },
+     {
+      "id": 645049,
+      "skill": "Solution Design",
+      "skill_name": "Solution Design",
+      "pivot": {
+       "entity_id": 1775961,
+       "subject_id": 645049,
+       "id": 6682541,
+       "ai_generated": true
+      }
+     }
+    ],
+    "locations": [],
+    "end_date": "2026-11-11T13:58:00+05:30",
+    "approved_date": "2026-10-25 17:47:38 GMT+0530",
+    "viewsCount": 1026,
+    "registerCount": 5,
+    "regnRequirements": {
+     "opportunity_id": 1775961,
+     "start_regn_dt": "2026-10-25T00:00:00+05:30",
+     "end_regn_dt": "2026-10-31T00:00:00+05:30",
+     "show_deadline": 1,
+     "min_team_size": 4,
+     "max_team_size": 5,
+     "work_location_type": "city",
+     "eligibility": "{\"sector\":[\"students\",\"school\"],\"engineering\":[],\"bSchools\":[],\"arts\":[],\"medicine\":[],\"law\":[],\"others\":[\"all\"],\"experience\":[\"all\"],\"studentPassoutYearsSelected\":[\"all\"],\"fresherPassoutYearsSelected\":[\"all\"],\"schoolFilteredClasses\":[\"all\"],\"minMarks\":{\"high_school_perc\":0,\"high_school_cgpa\":0},\"locations\":[],\"location_type\":\"all\",\"professionalEligibility\":null,\"fresherEligibility\":null}",
+     "reg_status": "STARTED",
+     "remainingDaysArray": {
+      "durations": 2,
+      "text": " days left"
+     },
+     "remain_days": "2 days left",
+     "remaining_time": 202797
+    }
+   },
+   {
     "id": 1781358,
     "public_url": "hackathons/pixels-to-prognosis-iit-madras-1781358",
     "title": "Pixels To Prognosis",
@@ -426,233 +967,100 @@
     }
    },
    {
-    "id": 1780735,
-    "public_url": "hackathons/hacknpitch-e-summit26-jadavpur-university-jadavpur-university-kolkata-1780735",
-    "title": "Hack<N>Pitch",
-    "organization_id": 696,
+    "id": 1778597,
+    "public_url": "hackathons/hacksprint-30-karpagam-academy-of-higher-education-1778597",
+    "title": "Hacksprint 3.0",
+    "organization_id": 101955,
     "type": "hackathons",
     "subtype": "online_coding_challenge",
     "regn_open": 1,
-    "updated_at": "2026-10-27T19:25:49+05:30",
-    "region": "offline",
+    "updated_at": "2026-10-27T15:06:07+05:30",
+    "region": "online",
     "visibility": "public",
-    "details": "<p><strong>Overview</strong></p>\n<ul>\n<li style=\"font-weight: 400;\" aria-level=\"1\"><span style=\"font-weight: 400;\">HACK&lt;N&gt;PITCH is Eastern India&rsquo;s premier 24-hour hackathon, set to take place on 20th&ndash;21st November 2026 at Jadavpur University&rsquo;s Salt Lake Campus (JUSL), Kolkata.</span></li>\n<li style=\"font-weight: 400;\" aria-level=\"1\"><span style=\"font-weight: 400;\">Designed to ignite innovation and entrepreneurial thinking, the event will bring together 30 elite teams (120 participants max) from across the country to compete, collaborate, and create impactful tech solutions under intense time constraints.</span></li>\n<li style=\"font-weight: 400;\" aria-level=\"1\"><span style=\"font-weight: 400;\">With a strong focus on real-world problem-solving, this hackathon is structured around six cutting-edge tracks:</span>\n<ul>\n<li style=\"font-weight: 400;\" aria-level=\"2\"><span style=\"font-weight: 400;\">1) Web/App Dev</span></li>\n<li style=\"font-weight: 400;\" aria-level=\"2\"><span style=\"font-weight: 400;\">2) Open Innovation</span></li>\n<li style=\"font-weight: 400;\" aria-level=\"2\"><span style=\"font-weight: 400;\">3) AI &amp; Applications (umbrella for Agentic, NLP, CV, Data Science, etc)</span></li>\n<li style=\"font-weight: 400;\" aria-level=\"2\"><span style=\"font-weight: 400;\">4) Game Development</span></li>\n<li style=\"font-weight: 400;\" aria-level=\"2\"><span style=\"font-weight: 400;\">5) Cybersecurity</span></li>\n<li style=\"font-weight: 400;\" aria-level=\"2\"><span style=\"font-weight: 400;\">6) Web3</span></li>\n</ul>\n</li>\n</ul>\n<p><strong>What Makes HACKPITCH Stand Out:</strong></p>\n<ul>\n<li style=\"font-weight: 400;\" aria-level=\"1\"><span style=\"font-weight: 400;\">Beyond its purpose, HACK&lt;N&gt;PITCH stands out for its scale and inclusivity.</span></li>\n<li style=\"font-weight: 400;\" aria-level=\"1\"><span style=\"font-weight: 400;\">As the biggest product-focused hackathon in Eastern India, it encourages diversity and balanced teamwork.</span></li>\n<li style=\"font-weight: 400;\" aria-level=\"1\"><span style=\"font-weight: 400;\">Teams will compete to become the sole undisputed winner and claim the grand cash prize by brainstorming, prototyping, and pitching their solutions to a panel of expert judges over the course of the 24-hour sprint.</span></li>\n<li style=\"font-weight: 400;\" aria-level=\"1\"><span style=\"font-weight: 400;\">Medals and certificates of excellence will also be awarded to other top-performing teams.</span></li>\n</ul>\n<p><strong>Purpose and Vision:</strong></p>\n<ul>\n<li style=\"font-weight: 400;\" aria-level=\"1\"><span style=\"font-weight: 400;\">HACK&lt;N&gt;PITCH is more than just a hackathon - it serves as a springboard for the next generation of innovators and builders.</span></li>\n<li style=\"font-weight: 400;\" aria-level=\"1\"><span style=\"font-weight: 400;\">The goal is to foster an innovative, technically superior, and entrepreneurial community through this event.</span></li>\n<li style=\"font-weight: 400;\" aria-level=\"1\"><span style=\"font-w",
-    "short_id": "3EFtjT2",
+    "details": "<p><strong>HackSprint 3.0 &mdash; Build Bold. Ride Beyond.</strong></p>\n<p><strong>About the Event</strong></p>\n<p>HackSprint 3.0 is a national-level, 36-hour hackathon organized by the Department of Computer Science and Engineering, Karpagam Academy of Higher Education (KAHE), Coimbatore, in collaboration with the Metaverse Association.</p>\n<p>HackSprint 3.0 brings together passionate developers, designers, problem-solvers, and innovators from across India to transform creative ideas into impactful, technology-driven solutions. It provides a platform to experiment with emerging technologies, collaborate with like-minded innovators, and tackle real-world challenges.</p>\n<ul>\n<li>\n<div>Mode: Online Preliminary Round + Offline Final Round</div>\n</li>\n<li>\n<div>Final Venue: Karpagam Academy of Higher Education (KAHE), Coimbatore, Tamil Nadu</div>\n</li>\n<li>\n<div>Final Hackathon Duration: 36 hours</div>\n</li>\n<li>\n<div>Application Deadline: 28 December 2026</div>\n</li>\n<li>\n<div>PPT Submission Template: Will be announced soon!</div>\n</li>\n</ul>\n<p><strong>How It Works</strong></p>\n<p><strong>Round 1: Online Idea Submission &amp; Screening</strong></p>\n<p>The first round will be conducted online. Interested teams must submit a PowerPoint presentation (PPT) outlining their proposed project idea before the application deadline.</p>\n<p>The presentation should explain:</p>\n<ul>\n<li>\n<div>Problem Statement: What real-world problem are you addressing?</div>\n</li>\n<li>\n<div>Proposed Solution: How will your idea solve the problem?</div>\n</li>\n<li>\n<div>Innovation: What makes your approach unique?</div>\n</li>\n<li>\n<div>Feasibility: How can the solution be implemented?</div>\n</li>\n<li>\n<div>Expected Impact: Who will benefit from your solution?</div>\n</li>\n<li>\n<div>Team Portfolio: Relevant projects, technical skills, and previous work, where available.</div>\n</li>\n</ul>\n<p>The organizing team will evaluate submissions based on innovation, problem relevance, feasibility, technical approach, potential impact, and relevant portfolio experience.</p>\n<p>Following the evaluation, selected teams will be shortlisted for the final round.</p>\n<p>Important: Submitting an application does not guarantee participation in the final hackathon. Only shortlisted teams will be invited to the offline round.</p>\n<p><strong>Round 2: Offline Final Hackathon</strong></p>\n<p>Shortlisted teams will participate in the 36-hour offline hackathon at Karpagam Academy of Higher Education, Coimbatore.</p>\n<p>Participants will develop their proposed solutions, build prototypes, test their implementations, and present their projects to the judging panel.</p>\n<p>Final evaluation will focus on innovation, technical implementation, functionality, feasibility, problem-solving, and overall impact.</p>\n<p>Final-round dates will be announced once confirmed.</p>\n<p><strong>HackSprint 3.0 Tracks</strong></p>\n<p>1. Agrotech</p>\n<p>Leverage technology to address agricultural challenges through smart irriga",
+    "short_id": "fqnoUmw",
     "organisation": {
-     "id": 696,
-     "name": "Jadavpur University (JU), Kolkata",
-     "public_url": "c/jadavpur-university-ju-kolkata-placement-interview-competitions-articles-videos-696",
-     "logoUrl": "https://d8it4huxumps7.cloudfront.net/images/partners/partners75/5d3fdfc2c0830_Jadavpur_university_logo.png",
-     "logoUrl2": "https://d8it4huxumps7.cloudfront.net/images/partners/partners125/5d3fdfc2c0830_Jadavpur_university_logo.png",
+     "id": 101955,
+     "name": "Karpagam Academy of Higher Education",
+     "public_url": "c/karpagam-academy-of-higher-education-recruiter-career-interview-selection-process-job-profile-articles-videos-101955",
+     "logoUrl": "",
+     "logoUrl2": "",
      "show_evaluator_login_link": false,
      "official_email_domains": null,
      "tier": null
     },
-    "seo_url": "https://unstop.com/hackathons/hacknpitch-e-summit26-jadavpur-university-jadavpur-university-kolkata-1780735",
+    "seo_url": "https://unstop.com/hackathons/hacksprint-30-karpagam-academy-of-higher-education-1778597",
     "status": "LIVE",
     "tags": [],
     "isPaid": false,
-    "festival": {
-     "id": 529863,
-     "name": "E-Summit'26 - Jadavpur University",
-     "abbr": null,
-     "organization_id": 696,
-     "organisation": {
-      "id": 696,
-      "name": "Jadavpur University (JU), Kolkata",
-      "logo": "5d3fdfc2c0830_Jadavpur_university_logo.png"
-     },
-     "start_date": "2026-10-26 00:00:00+05:30",
-     "end_date": "2026-11-22 17:16:42+05:30",
-     "theme_colour": "amber_un",
-     "header_type": 0,
-     "footer_type": 0,
-     "public_url": "college-fests/e-summit26-jadavpur-university-jadavpur-university-ju-kolkata-529863",
-     "logoUrl2": "https://d8it4huxumps7.cloudfront.net/uploads/images/festival/logo/150x150/6adf48b6d4c20_screenshot_2026-10-26_180327.png",
-     "regnRequirements": {
-      "id": 2510664,
-      "opportunity_id": null,
-      "festival_id": 529863,
-      "max_team_size": null,
-      "min_team_size": null,
-      "start_regn_dt": "2026-10-26T17:14:41+05:30",
-      "end_regn_dt": "2026-11-02T17:14:41+05:30",
-      "show_deadline": 1,
-      "open_for": 0,
-      "college_type": 0,
-      "same_organisation": 1,
-      "study_year_filter": 0,
-      "deleted_at": null,
-      "enable_payment": 0,
-      "reg_amount": null,
-      "payment_for": 0,
-      "service_charge_from": 0,
-      "allow_coupons": 0,
-      "eligibility": null,
-      "payout_data": null,
-      "gender": [
-       "A"
-      ],
-      "vendor_id": null,
-      "verified_email": 1,
-      "verified_mobile": 1,
-      "experience": null,
-      "only_official_domains": null,
-      "enable_verifications": null,
-      "enable_icsfile": null,
-      "proctoring": {},
-      "gender_diversity": null,
-      "allow_social_login": 1,
-      "allowed_countries": null,
-      "extendedFormData": null,
-      "extendRegForm": null,
-      "screening_round": null,
-      "consent_needed": 0,
-      "invitations_allowed": 0,
-      "registration_limit": null,
-      "same_graduation_year": 0,
-      "same_course": 0,
-      "same_user_type": 0,
-      "can_edit_extended_form": 0,
-      "extend_basic_form": null,
-      "core_req_fields": null,
-      "enable_draft_reg": false,
-      "closed_job_end_date": 0,
-      "reg_restricted": 0,
-      "free_webinar_for_unstop_pro": 0,
-      "email_reply_to": 0,
-      "verified_aadhaar": 0,
-      "verified_aadhaar_face": 0,
-      "player_extended_form": null,
-      "unique_face_verify": false,
-      "resume_parser": 0,
-      "display_compatibility_score": null,
-      "registration_config": {
-       "enable_newsletter_subscription": 0
-      },
-      "verified_driving_licence_face": 0,
-      "verified_aadhaar_face_via_digilocker": 0,
-      "audio_capture": 0,
-      "verification_service": 2,
-      "driver_for_proctoring": "aws",
-      "digilocker_verification_service": 1,
-      "allow_specific_cities": false,
-      "enable_data_transfer_to_SAP": 0,
-      "resume_match_config": "[{\"key\": \"work_experience\", \"label\": \"Work Experience\", \"include\": true, \"is_custom\": false, \"weightage\": 17, \"weight_level\": 1}, {\"key\": \"skills\", \"label\": \"Skills\", \"include\": true, \"is_custom\": false, \"weightage\": 17, \"weight_level\": 1}, {\"key\": \"education\", \"label\": \"Education\", \"include\": true, \"is_custom\": false, \"weightage\": 17, \"weight_level\": 1}, {\"key\": \"achievements\", \"label\": \"Achievements\", \"include\": true, \"is_custom\": false, \"weightage\": 17, \"weight_level\": 1}, {\"key\": \"certifications\", \"label\": \"Certifications\", \"include\": true, \"is_custom\": false, \"weightage\": 16, \"weight_level\": 1}, {\"key\": \"projects\", \"label\": \"Projects\", \"include\": true, \"is_custom\": false, \"weightage\": 16, \"weight_level\": 1}]",
-      "limit_type": 1,
-      "work_location_type": "city",
-      "gender_verification": false,
-      "sap_stage_id": null,
-      "has_compatibility_priority": 0,
-      "face_recog_driver": "aws",
-      "face_detect_driver": "aws",
-      "linkedin_verification_requirement": "NONE"
-     },
-     "regn_open": 0
-    },
-    "prizes": [
-     {
-      "id": 3867937,
-      "rank": "Winners ",
-      "cash": 5500,
-      "currency": "fa-rupee",
-      "certificate": 1,
-      "entity_id": 1780735,
-      "entity_type": "App\\Model\\Opportunity",
-      "others": "Additional in-kind prizes",
-      "currencyCode": null,
-      "cash_postfix": null,
-      "max_cash": null,
-      "pre_placement_internship": 0,
-      "pre_placement_opportunity": 0,
-      "prize_type": "cash"
-     },
-     {
-      "id": 3867938,
-      "rank": "1st Runners-up",
-      "cash": 4000,
-      "currency": "fa-rupee",
-      "certificate": 1,
-      "entity_id": 1780735,
-      "entity_type": "App\\Model\\Opportunity",
-      "others": "Additional in-kind prizes",
-      "currencyCode": null,
-      "cash_postfix": null,
-      "max_cash": null,
-      "pre_placement_internship": 0,
-      "pre_placement_opportunity": 0,
-      "prize_type": "cash"
-     },
-     {
-      "id": 3867939,
-      "rank": "2nd Runners-up",
-      "cash": 2500,
-      "currency": "fa-rupee",
-      "certificate": 1,
-      "entity_id": 1780735,
-      "entity_type": "App\\Model\\Opportunity",
-      "others": "Additional in-kind prizes",
-      "currencyCode": null,
-      "cash_postfix": null,
-      "max_cash": null,
-      "pre_placement_internship": 0,
-      "pre_placement_opportunity": 0,
-      "prize_type": "cash"
-     }
-    ],
+    "festival": null,
+    "prizes": [],
     "address_with_country_logo": {
-     "id": 1878878,
-     "address": "Jadavpur University, Salt-lake Campus, Kolkata",
-     "city": "Kolkata",
-     "state": "West Bengal",
-     "country": {
-      "id": 94,
-      "name": "India",
-      "alpha_2": "in",
-      "alpha_3": "ind",
-      "iso": "IN",
-      "iso3": "IND",
-      "numcode": 356,
-      "phonecode": "+91   "
-     },
+     "id": 1877236,
+     "address": "",
+     "city": "",
+     "state": "",
+     "country": null,
      "zip": null,
      "lat": null,
      "lng": null,
-     "addressable_id": 1780735,
+     "addressable_id": 1778597,
      "addressable_type": "App\\Model\\Opportunity",
-     "created_at": "2026-10-27T16:39:39+05:30",
-     "updated_at": "2026-10-27T19:24:53+05:30",
+     "created_at": "2026-10-26T18:44:14+05:30",
+     "updated_at": "2026-10-26T19:19:25+05:30",
      "deleted_at": null,
      "address_title": "event_location",
-     "city_id": 142001,
+     "city_id": null,
      "sort_order": 1,
      "state_code": null,
      "country_code": null
     },
-    "short_url": "https://unstop.com/o/3EFtjT2",
+    "short_url": "https://unstop.com/o/fqnoUmw",
     "assignedTag": {
      "tag": null
     },
     "required_skills": [
      {
-      "id": 1373,
-      "skill": "Problem Solving",
-      "skill_name": "Problem Solving",
+      "id": 668375,
+      "skill": "PowerPoint",
+      "skill_name": "PowerPoint",
       "pivot": {
-       "entity_id": 1780735,
-       "subject_id": 1373,
-       "id": 6688505,
+       "entity_id": 1778597,
+       "subject_id": 668375,
+       "id": 6673981,
        "ai_generated": true
       }
      },
      {
-      "id": 645880,
-      "skill": "Creativity",
-      "skill_name": "Creativity",
+      "id": 1373,
+      "skill": "Problem Solving",
+      "skill_name": "Problem Solving",
       "pivot": {
-       "entity_id": 1780735,
-       "subject_id": 645880,
-       "id": 6688506,
+       "entity_id": 1778597,
+       "subject_id": 1373,
+       "id": 6673982,
+       "ai_generated": true
+      }
+     },
+     {
+      "id": 645189,
+      "skill": "Technical Skills",
+      "skill_name": "Technical Skills",
+      "pivot": {
+       "entity_id": 1778597,
+       "subject_id": 645189,
+       "id": 6673983,
+       "ai_generated": true
+      }
+     },
+     {
+      "id": 647051,
+      "skill": "Project proposal",
+      "skill_name": "Project proposal",
+      "pivot": {
+       "entity_id": 1778597,
+       "subject_id": 647051,
+       "id": 6673984,
        "ai_generated": true
       }
      },
@@ -661,209 +1069,34 @@
       "skill": "Teamwork and Collaboration",
       "skill_name": "Teamwork and Collaboration",
       "pivot": {
-       "entity_id": 1780735,
+       "entity_id": 1778597,
        "subject_id": 647511,
-       "id": 6688507,
-       "ai_generated": true
-      }
-     },
-     {
-      "id": 643357,
-      "skill": "Brainstorming",
-      "skill_name": "Brainstorming",
-      "pivot": {
-       "entity_id": 1780735,
-       "subject_id": 643357,
-       "id": 6688508,
-       "ai_generated": true
-      }
-     },
-     {
-      "id": 647066,
-      "skill": "Public Speaking and Presentation Skills",
-      "skill_name": "Public Speaking and Presentation Skills",
-      "pivot": {
-       "entity_id": 1780735,
-       "subject_id": 647066,
-       "id": 6688509,
+       "id": 6673985,
        "ai_generated": true
       }
      }
     ],
     "locations": [],
-    "end_date": "2026-11-21T19:01:00+05:30",
-    "approved_date": "2026-10-27 19:25:49 GMT+0530",
-    "viewsCount": 482,
-    "registerCount": 12,
+    "end_date": "2026-12-28T23:59:05+05:30",
+    "approved_date": "2026-10-26 19:19:56 GMT+0530",
+    "viewsCount": 4072,
+    "registerCount": 25,
     "regnRequirements": {
-     "opportunity_id": 1780735,
-     "start_regn_dt": "2026-10-28T00:00:00+05:30",
-     "end_regn_dt": "2026-11-12T23:59:00+05:30",
+     "opportunity_id": 1778597,
+     "start_regn_dt": "2026-10-26T00:00:00+05:30",
+     "end_regn_dt": "2026-12-28T23:59:05+05:30",
      "show_deadline": 1,
      "min_team_size": 2,
      "max_team_size": 4,
      "work_location_type": "city",
-     "eligibility": "{\"sector\":[\"students\",\"school\"],\"engineering\":[],\"bSchools\":[],\"arts\":[],\"medicine\":[],\"law\":[],\"others\":[\"all\"],\"experience\":[\"all\"],\"studentPassoutYearsSelected\":[\"all\"],\"fresherPassoutYearsSelected\":[\"all\"],\"schoolFilteredClasses\":[11,12],\"minMarks\":{\"high_school_perc\":0,\"high_school_cgpa\":0},\"locations\":[],\"location_type\":\"all\",\"professionalEligibility\":null,\"fresherEligibility\":null}",
+     "eligibility": "{\"sector\":[\"students\"],\"engineering\":[\"allCourses\",{\"course\":\"btech\",\"type\":\"engineering\",\"programme\":[\"all\"],\"passoutYear\":[\"all\"],\"specialization\":[\"all\"],\"duration\":4},{\"course\":\"mtech\",\"type\":\"engineering\",\"programme\":[\"all\"],\"passoutYear\":[\"all\"],\"specialization\":[\"all\"],\"duration\":2},{\"course\":\"integrated\",\"type\":\"engineering\",\"programme\":[\"all\"],\"passoutYear\":[\"all\"],\"specialization\":[\"all\"],\"duration\":5},{\"course\":\"engOthers\",\"type\":\"engineering\",\"programme\":[\"all\"],\"passoutYear\":[\"all\"],\"specialization\":[\"all\"],\"duration\":3},{\"course\":\"bca\",\"type\":\"engineering\",\"programme\":[\"all\"],\"passoutYear\":[\"all\"],\"specialization\":[\"all\"],\"duration\":3},{\"course\":\"mca\",\"type\":\"engineering\",\"programme\":[\"all\"],\"passoutYear\":[\"all\"],\"specialization\":[\"all\"],\"duration\":2},{\"course\":\"mca1\",\"type\":\"engineering\",\"programme\":[\"all\"],\"passoutYear\":[\"all\"],\"specialization\":[\"all\"],\"duration\":3},{\"course\":\"mcm\",\"type\":\"engineering\",\"programme\":[\"all\"],\"passoutYear\":[\"all\"],\"specialization\":[\"all\"],\"duration\":2},{\"course\":\"phdEng\",\"type\":\"engineering\",\"programme\":[\"all\"],\"passoutYear\":[\"all\"],\"specialization\":[\"all\"],\"duration\":5},{\"course\":\"diploma\",\"type\":\"engineering\",\"programme\":[\"all\"],\"passoutYear\":[\"all\"],\"specialization\":[\"all\"],\"duration\":0}],\"bSchools\":[\"allCourses\",{\"course\":\"mba1\",\"type\":\"bSchools\",\"programme\":[\"all\"],\"passoutYear\":[\"all\"],\"specialization\":[\"all\"],\"duration\":1},{\"course\":\"mba2\",\"type\":\"bSchools\",\"programme\":[\"all\"],\"passoutYear\":[\"all\"],\"specialization\":[\"all\"],\"duration\":2},{\"course\":\"bba\",\"type\":\"bSchools\",\"programme\":[\"all\"],\"passoutYear\":[\"all\"],\"specialization\":[\"all\"],\"duration\":3},{\"course\":\"bSchoolOthers\",\"type\":\"bSchools\",\"programme\":[\"all\"],\"passoutYear\":[\"all\"],\"specialization\":[\"all\"],\"duration\":3},{\"course\":\"bcom\",\"type\":\"bSchools\",\"programme\":[\"all\"],\"passoutYear\":[\"all\"],\"specialization\":[\"all\"],\"duration\":3},{\"course\":\"mcom\",\"type\":\"bSchools\",\"programme\":[\"all\"],\"passoutYear\":[\"all\"],\"specialization\":[\"all\"],\"duration\":2},{\"course\":\"bhm\",\"type\":\"bSchools\",\"programme\":[\"all\"],\"passoutYear\":[\"all\"],\"specialization\":[\"all\"],\"duration\":3},{\"course\":\"ca\",\"type\":\"bSchools\",\"programme\":[\"all\"],\"passoutYear\":[\"all\"],\"specialization\":[\"all\"],\"duration\":3},{\"course\":\"cs\",\"type\":\"bSchools\",\"programme\":[\"all\"],\"passoutYear\":[\"all\"],\"specialization\":[\"all\"],\"duration\":3},{\"course\":\"pgdm\",\"type\":\"bSchools\",\"programme\":[\"all\"],\"passoutYear\":[\"all\"],\"specialization\":[\"all\"],\"duration\":2},{\"course\":\"execMba\",\"type\":\"bSchools\",\"programme\":[\"all\"],\"passoutYear\":[\"all\"],\"specialization\":[\"all\"],\"duration\":1},{\"course\":\"ipm\",\"type\":\"bSchools\",\"programme\":[\"all\"],\"passoutYear\":[\"all\"],\"specialization\":[\"all\"],\"duration\":5},{\"course\":\"phdManagement\",\"type\":\"bSchools\",\"programme\":[\"all\"],\"passoutYear\":[\"all\"],\"specialization\":[\"all\"],\"duration\":3}],\"arts\":[\"allCourses\",{\"course\":\"bsc\",\"type\":\"arts\",\"programme\":[\"all\"],\"passoutYear\":[\"all\"],\"specialization\":[\"all\"],\"duration\":3},{\"course\":\"msc\",\"type\":\"arts\",\"programme\":[\"all\"],\"passoutYear\":[\"all\"],\"specialization\":[\"all\"],\"duration\":2},{\"course\":\"ba\",\"type\":\"arts\",\"programme\":[\"all\"],\"passoutYear\":[\"all\"],\"specialization\":[\"all\"],\"duration\":3},{\"course\":\"ma\",\"type\":\"arts\",\"programme\":[\"all\"],\"passoutYear\":[\"all\"],\"specialization\":[\"all\"],\"duration\":2},{\"course\":\"artsOthers\",\"type\":\"arts\",\"programme\":[\"all\"],\"passoutYear\":[\"all\"],\"specialization\":[\"all\"],\"duration\":3},{\"course\":\"mdes\",\"type\":\"arts\",\"programme\":[\"all\"],\"passoutYear\":[\"all\"],\"specialization\":[\"all\"],\"duration\":2},{\"course\":\"march\",\"type\":\"arts\",\"programme\":[\"all\"],\"passoutYear\":[\"all\"],\"specialization\":[\"all\"],\"duration\":2},{\"course\":\"bdes\",\"type\":\"arts\",\"programme\":[\"all\"],\"passoutYear\":[\"all\"],\"specialization\":[\"all\"],\"duration\":3},{\"course\":\"barch\",\"type\":\"arts\",\"programme\":[\"all\"],\"passoutYear\":[\"all\"],\"specialization\":[\"all\"],\"duration\":5},{\"course\":\"bftech\",\"type\":\"arts\",\"programme\":[\"all\"],\"passoutYear\":[\"all\"],\"specialization\":[\"all\"],\"duration\":4},{\"course\":\"bplan\",\"type\":\"arts\",\"programme\":[\"all\"],\"passoutYear\":[\"all\"],\"specialization\":[\"all\"],\"duration\":4},{\"course\":\"mplan\",\"type\":\"arts\",\"programme\":[\"all\"],\"passoutYear\":[\"all\"],\"specialization\":[\"all\"],\"duration\":2},{\"course\":\"phdArts\",\"type\":\"arts\",\"programme\":[\"all\"],\"passoutYear\":[\"all\"],\"specialization\":[\"all\"],\"duration\":5},{\"course\":\"mftech\",\"type\":\"arts\",\"programme\":[\"all\"],\"passoutYear\":[\"all\"],\"specialization\":[\"all\"],\"duration\":2},{\"course\":\"bfa\",\"type\":\"arts\",\"programme\":[\"all\"],\"passoutYear\":[\"all\"],\"specialization\":[\"all\"],\"duration\":4},{\"course\":\"mfa\",\"type\":\"arts\",\"programme\":[\"all\"],\"passoutYear\":[\"all\"],\"specialization\":[\"all\"],\"duration\":2},{\"course\":\"bs\",\"type\":\"arts\",\"programme\":[\"all\"],\"passoutYear\":[\"all\"],\"specialization\":[\"all\"],\"duration\":3},{\"course\":\"ms\",\"type\":\"arts\",\"programme\":[\"all\"],\"passoutYear\":[\"all\"],\"specialization\":[\"all\"],\"duration\":2},{\"course\":\"bed\",\"type\":\"arts\",\"programme\":[\"all\"],\"passoutYear\":[\"all\"],\"specialization\":[\"all\"],\"duration\":2},{\"course\":\"med\",\"type\":\"arts\",\"programme\":[\"all\"],\"passoutYear\":[\"all\"],\"specialization\":[\"all\"],\"duration\":2},{\"course\":\"beled\",\"type\":\"arts\",\"programme\":[\"all\"],\"passoutYear\":[\"all\"],\"specialization\":[\"all\"],\"duration\":4},{\"course\":\"bped\",\"type\":\"arts\",\"programme\":[\"all\"],\"passoutYear\":[\"all\"],\"specialization\":[\"all\"],\"duration\":2}],\"medicine\":[],\"law\":[],\"others\":[\"all\"],\"experience\":[\"all\"],\"studentPassoutYearsSelected\":[\"all\"],\"fresherPassoutYearsSelected\":[\"all\"],\"schoolFilteredClasses\":[\"all\"],\"minMarks\":{\"high_school_perc\":0,\"high_school_cgpa\":0},\"locations\":[],\"location_type\":\"all\",\"professionalEligibility\":null,\"fresherEligibility\":null}",
      "reg_status": "STARTED",
      "remainingDaysArray": {
-      "durations": 15,
-      "text": " days left"
+      "durations": "2",
+      "text": "months left"
      },
-     "remain_days": "15 days left",
-     "remaining_time": 1326018
-    }
-   },
-   {
-    "id": 1781449,
-    "public_url": "hackathons/neurohack-2027-iit-madras-1781449",
-    "title": "Neurohack 2027",
-    "organization_id": 606,
-    "type": "hackathons",
-    "subtype": "online_coding_challenge",
-    "regn_open": 1,
-    "updated_at": "2026-10-28T09:44:51+05:30",
-    "region": "hybrid",
-    "visibility": "public",
-    "details": "<p><strong>Overview</strong></p>\n<p><span style=\"font-weight: 400;\">Neurohack is a two-round computational neuroscience hackathon hosted under BIOGEN at SHAASTRA 2026, IIT Madras. Participants will work with real EEG datasets to build pipelines that classify human emotions from brainwave signals, combining signal processing, machine learning, and neuroscience in one challenge.</span></p>\n<p><strong>Eligibility</strong></p>\n<ul>\n<li><span style=\"font-weight: 400;\">Open to undergraduate and postgraduate students.</span></li>\n<li style=\"font-weight: 400;\" aria-level=\"1\"><span style=\"font-weight: 400;\">Teams of 1&ndash;4 members.</span></li>\n<li style=\"font-weight: 400;\" aria-level=\"1\"><span style=\"font-weight: 400;\">Participants may be from any discipline and any institute; no prior EEG experience is required, but working knowledge of Python is expected.</span></li>\n</ul>\n<p><strong>Target Audience</strong></p>\n<p><span style=\"font-weight: 400;\">Students interested in:</span></p>\n<ul>\n<li style=\"font-weight: 400;\" aria-level=\"1\"><span style=\"font-weight: 400;\">Biotechnology &amp; biomedical engineering</span></li>\n<li style=\"font-weight: 400;\" aria-level=\"1\"><span style=\"font-weight: 400;\">Neuroscience and cognitive science</span></li>\n<li style=\"font-weight: 400;\" aria-level=\"1\"><span style=\"font-weight: 400;\">Computer science, data science and machine learning</span></li>\n<li style=\"font-weight: 400;\" aria-level=\"1\"><span style=\"font-weight: 400;\">Signal processing and electronics</span></li>\n</ul>\n<p><strong>Competition Rounds</strong></p>\n<p><strong>Round 1: Online Quiz</strong></p>\n<p>An online quiz covering basic neuroscience, EEG principles, brain-wave patterns, and Python for data analysis. Top-scoring teams advance to Round 2.</p>\n<p><strong>Round 2: 24-Hour Offline Hackathon</strong></p>\n<p>Selected teams are invited to IIT Madras during SHAASTRA 2026 for a <strong>24-hour hackathon</strong>. Participants receive a preprocessed subset of a public EEG emotion dataset and build a complete pipeline to classify human emotions using signal processing and machine learning.</p>\n<p><strong>Finals at IIT Madras: PPT Presentation</strong></p>\n<p>Each team presents its problem approach, features, model, results, and insights from the brain signals to a panel of judges, followed by a Q&amp;A session.</p>",
-    "short_id": "RLe7IvP",
-    "organisation": {
-     "id": 606,
-     "name": "Indian Institute of Technology (IIT), Madras",
-     "public_url": "c/indian-institute-of-technology-iit-madras-placement-interview-competitions-articles-videos-606",
-     "logoUrl": "https://d8it4huxumps7.cloudfront.net/images/partners/partners75/5d0e0759acbbe_iitmlogo120.png",
-     "logoUrl2": "https://d8it4huxumps7.cloudfront.net/images/partners/partners125/5d0e0759acbbe_iitmlogo120.png",
-     "show_evaluator_login_link": false,
-     "official_email_domains": "@smail.iitm.ac.in,@iitm.ac.in,@ds.study.iitm.ac.in,@es.study.iitm.ac.in, @ge.iitm.ac.in",
-     "tier": 1
-    },
-    "seo_url": "https://unstop.com/hackathons/neurohack-2027-iit-madras-1781449",
-    "status": "LIVE",
-    "tags": [],
-    "isPaid": false,
-    "festival": null,
-    "prizes": [],
-    "address_with_country_logo": {
-     "id": 1879574,
-     "address": "IIT Madras",
-     "city": "Chennai",
-     "state": "Tamil Nadu",
-     "country": {
-      "id": 94,
-      "name": "India",
-      "alpha_2": "in",
-      "alpha_3": "ind",
-      "iso": "IN",
-      "iso3": "IND",
-      "numcode": 356,
-      "phonecode": "+91   "
-     },
-     "zip": null,
-     "lat": null,
-     "lng": null,
-     "addressable_id": 1781449,
-     "addressable_type": "App\\Model\\Opportunity",
-     "created_at": "2026-10-28T01:29:28+05:30",
-     "updated_at": "2026-10-28T09:44:52+05:30",
-     "deleted_at": null,
-     "address_title": "event_location",
-     "city_id": 131517,
-     "sort_order": 1,
-     "state_code": null,
-     "country_code": null
-    },
-    "short_url": "https://unstop.com/o/RLe7IvP",
-    "assignedTag": {
-     "tag": null
-    },
-    "required_skills": [
-     {
-      "id": 647074,
-      "skill": "Python",
-      "skill_name": "Python",
-      "pivot": {
-       "entity_id": 1781449,
-       "subject_id": 647074,
-       "id": 6692125,
-       "ai_generated": true
-      }
-     },
-     {
-      "id": 646619,
-      "skill": "Machine Learning Concepts",
-      "skill_name": "Machine Learning Concepts",
-      "pivot": {
-       "entity_id": 1781449,
-       "subject_id": 646619,
-       "id": 6692126,
-       "ai_generated": true
-      }
-     },
-     {
-      "id": 643653,
-      "skill": "Digital Signal Processing (DSP)",
-      "skill_name": "Digital Signal Processing (DSP)",
-      "pivot": {
-       "entity_id": 1781449,
-       "subject_id": 643653,
-       "id": 6692127,
-       "ai_generated": true
-      }
-     },
-     {
-      "id": 646141,
-      "skill": "Feature Extraction",
-      "skill_name": "Feature Extraction",
-      "pivot": {
-       "entity_id": 1781449,
-       "subject_id": 646141,
-       "id": 6692128,
-       "ai_generated": true
-      }
-     },
-     {
-      "id": 646912,
-      "skill": "Pattern Recognition",
-      "skill_name": "Pattern Recognition",
-      "pivot": {
-       "entity_id": 1781449,
-       "subject_id": 646912,
-       "id": 6692129,
-       "ai_generated": true
-      }
-     },
-     {
-      "id": 643334,
-      "skill": "Bioinformatics",
-      "skill_name": "Bioinformatics",
-      "pivot": {
-       "entity_id": 1781449,
-       "subject_id": 643334,
-       "id": 6692130,
-       "ai_generated": false
-      }
-     }
-    ],
-    "locations": [],
-    "end_date": "2026-12-04T00:00:00+05:30",
-    "approved_date": "2026-10-28 09:44:09 GMT+0530",
-    "viewsCount": 1,
-    "registerCount": 14,
-    "regnRequirements": {
-     "opportunity_id": 1781449,
-     "start_regn_dt": "2026-10-28T00:00:00+05:30",
-     "end_regn_dt": "2026-12-04T00:00:00+05:30",
-     "show_deadline": 1,
-     "min_team_size": 1,
-     "max_team_size": 4,
-     "work_location_type": "city",
-     "eligibility": "{\"sector\":[\"students\"],\"engineering\":[],\"bSchools\":[],\"arts\":[],\"medicine\":[],\"law\":[],\"others\":[\"all\"],\"experience\":[\"all\"],\"studentPassoutYearsSelected\":[\"all\"],\"fresherPassoutYearsSelected\":[\"all\"],\"schoolFilteredClasses\":[\"all\"],\"minMarks\":{\"high_school_perc\":0,\"high_school_cgpa\":0},\"locations\":[],\"location_type\":\"all\",\"professionalEligibility\":null,\"fresherEligibility\":null}",
-     "reg_status": "STARTED",
-     "remainingDaysArray": {
-      "durations": "1",
-      "text": "month left"
-     },
-     "remain_days": "1 month left",
-     "remaining_time": 3140332
+     "remain_days": "2 months left",
+     "remaining_time": 5300302
     }
    }
   ]
