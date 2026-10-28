@@ -3,7 +3,7 @@ from datetime import datetime
 from pathlib import Path
 
 from hackwatch import filters
-from hackwatch.sources import agorize, ctftime, devpost, lablab, luma
+from hackwatch.sources import agorize, ctftime, devpost, lablab, luma, mlh
 
 FX = Path(__file__).parent / "fixtures"
 
@@ -104,3 +104,20 @@ def test_lablab_parse():
 def test_lablab_all_past():
     page = (FX / "lablab.html").read_text(encoding="utf-8")
     assert lablab.parse(page, now=datetime(2027, 6, 1)) == []
+
+
+def test_mlh_parse():
+    page = (FX / "mlh.html").read_text(encoding="utf-8")
+    items = mlh.parse(page, now=datetime(2026, 10, 28))
+    assert len(items) == 3  # les événements passés (pastEvents) sont ignorés
+    assert all(h.source == "mlh" and h.registration_open and not h.is_online for h in items)
+    assert all(h.location and "MLH" in h.tags for h in items)
+    assert not any(filters.keep(h) for h in items)  # aucun à Paris ni en ligne
+
+
+def test_mlh_digital_and_ended():
+    page = (FX / "mlh.html").read_text(encoding="utf-8")
+    page = page.replace('"formatType": "physical"', '"formatType": "digital"')
+    digital = mlh.parse(page, now=datetime(2026, 10, 28))
+    assert any(h.is_online and h.location == "Online" and filters.keep(h) for h in digital)
+    assert not any(h.registration_open for h in mlh.parse(page, now=datetime(2027, 6, 1)))

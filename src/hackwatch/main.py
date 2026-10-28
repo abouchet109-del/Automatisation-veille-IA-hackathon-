@@ -6,12 +6,13 @@ import sys
 
 from hackwatch import filters, llm, notify, scoring
 from hackwatch.models import Hackathon
-from hackwatch.sources import agorize, ctftime, devpost, lablab, luma
+from hackwatch.sources import agorize, ctftime, devpost, lablab, luma, mlh
 from hackwatch.scoring import Scored
 from hackwatch.store import Store
 
 SOURCES = {"devpost": devpost.fetch, "ctftime": ctftime.fetch, "luma": luma.fetch,
-           "agorize": agorize.fetch, "lablab": lablab.fetch}
+           "agorize": agorize.fetch, "lablab": lablab.fetch,
+           "mlh": mlh.fetch}
 
 
 def collect() -> list[Hackathon]:
