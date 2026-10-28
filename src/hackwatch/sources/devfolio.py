@@ -48,6 +48,7 @@ def parse(page: str, now: datetime | None = None) -> list[Hackathon]:
                 location="Online" if h.get("is_online") else "",
                 is_online=bool(h.get("is_online")),
                 tags=[t["theme"]["name"] for t in h.get("themes") or [] if t.get("theme")],
+                tracks=[t["theme"]["name"] for t in h.get("themes") or [] if t.get("theme")],
                 description=f"Hackathon Devfolio (fuseau {tz})" if tz else "Hackathon Devfolio",
                 registration_open=bool(reg_end and reg_end > now),
             )

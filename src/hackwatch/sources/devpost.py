@@ -54,6 +54,7 @@ def parse(data: dict) -> list[Hackathon]:
                 is_online=loc.lower() == "online",
                 prize=_prize(h.get("prize_amount", "")),
                 tags=[t["name"] for t in h.get("themes", [])],
+                tracks=[t["name"] for t in h.get("themes", [])],
                 description=h.get("organization_name") or "",
                 registration_open=h.get("open_state") in ("open", "upcoming")
                 and not h.get("invite_only"),

@@ -1,0 +1,34 @@
+{
+ "data": {
+  "id": "3064",
+  "attributes": {
+   "name": "Make AI Happen"
+  }
+ },
+ "included": [
+  {
+   "id": "2450",
+   "type": "categories",
+   "attributes": {
+    "id": 2450,
+    "name": "1 - Automatiser avec l'IA la production d'études et d'analyses de marché"
+   }
+  },
+  {
+   "id": "2423",
+   "type": "categories",
+   "attributes": {
+    "id": 2423,
+    "name": "2 - Réinventer la fonction data grâce à des agents intelligents autonomes et collaboratifs"
+   }
+  },
+  {
+   "id": "2424",
+   "type": "categories",
+   "attributes": {
+    "id": 2424,
+    "name": "3 - Mettre en place un cabinet d’avocat AI ready "
+   }
+  }
+ ]
+}

@@ -5,7 +5,7 @@ import json
 import re
 import sys
 
-from hackwatch import filters, llm, notify, scoring
+from hackwatch import enrich, filters, llm, notify, scoring
 from hackwatch.models import Hackathon
 from hackwatch.sources import agorize, ctftime, devevents, devfolio, devpost, lablab, luma, mlh, unstop
 from hackwatch.scoring import Scored
@@ -95,6 +95,8 @@ def main(argv: list[str] | None = None) -> int:
                       f"{h.prize or '-'}")
                 print(f"      {'; '.join(s.raisons) or '-'} | {h.url}")
             return 0
+        if to_send:
+            enrich.enrich([s.hackathon for s in to_send])  # tracks + résumé, principaux seulement
         if args.preview:
             with open(args.preview, "w", encoding="utf-8") as f:
                 f.write(notify.render(to_send, below, failed))

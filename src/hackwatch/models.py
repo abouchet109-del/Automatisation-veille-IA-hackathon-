@@ -17,3 +17,5 @@ class Hackathon:
     tags: list[str] = field(default_factory=list)
     description: str = ""
     registration_open: bool = True
+    tracks: list[str] = field(default_factory=list)  # thèmes / défis, remplis par enrich pour les principaux
+    resume: str = ""  # une phrase, remplie par enrich

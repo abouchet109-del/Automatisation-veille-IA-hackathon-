@@ -19,9 +19,11 @@ def _item(s: Scored) -> str:
         when += f" → {h.end:%d/%m/%Y}"
     meta = " · ".join(x for x in (when, h.location or ("en ligne" if h.is_online else ""),
                                   h.prize, f"score {s.score:.2f}") if x)
+    tracks = (f'<br><small><b>Tracks :</b> {html.escape(" · ".join(h.tracks))}</small>' if h.tracks else "")
+    resume = f'<br><small style="color:#333">{html.escape(h.resume)}</small>' if h.resume else ""
     return (f'<li style="margin-bottom:12px"><a href="{html.escape(h.url)}"><b>{html.escape(h.title)}</b></a>'
-            f'<br><span style="color:#555">{html.escape(meta)}</span>'
-            f'<br><small>{html.escape("; ".join(s.raisons))}</small></li>')
+            f'<br><span style="color:#555">{html.escape(meta)}</span>{tracks}{resume}'
+            f'<br><small style="color:#777">{html.escape("; ".join(s.raisons))}</small></li>')
 
 
 MAX_OTHERS = 150

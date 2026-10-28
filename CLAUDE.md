@@ -19,6 +19,7 @@ Plan de travail par phases : `PLAN.md`. Une session = une phase.
 - `llm.py` : re-scoring optionnel Claude Haiku, actif seulement si `ANTHROPIC_API_KEY` (extra `[llm]`).
 - `filters.py` : inscriptions ouvertes ET (en ligne, hybride compris, OU présentiel Paris / Île-de-France) ; comparaison sans accents, homonymes hors IDF exclus.
 - `store.py` : SQLite `hackwatch.db`, dédoublonnage par URL, trace des envois.
+- `enrich.py` : tracks + résumé des seuls principaux (15 pages max par run, sans LLM) ; Devpost = noms des prix, Agorize = catégories de l'API, Luma = liste sous un titre « tracks », sinon thèmes de la source ; jamais bloquant.
 - `notify.py` : email HTML via SMTP Gmail (SSL 465).
 - `main.py` : collecte → filtre → nouveautés → email (`--dry-run` pour afficher ; `--all` ajoute les éléments sous le seuil ou déjà envoyés, pour calibrer).
 - Email : « principaux » (score ≥ seuil, groupés par axe) + tableau « Autres » (reste de ce qui passe les filtres, tronqué à 150) ; les deux sont marqués envoyés. `--preview f.html` écrit le HTML sans envoi ni marquage.
