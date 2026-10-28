@@ -32,16 +32,17 @@
   },
 
   "contraintes": {
-    "formats": ["online", "Paris / Île-de-France", "Europe si prise en charge des frais"],
+    "formats": ["online (distanciel)", "Paris / Île-de-France", "France"],
     "eligibilite": ["étudiants", "ouvert à tous", "solo accepté ou formation d'équipe sur place"],
     "niveau_accepte": ["beginner-friendly", "intermédiaire"],
-    "exclure": ["réservé à une autre école/université", "inscriptions closes", "lieu hors Europe sans option en ligne"]
+    "exclure": ["réservé à une autre école/université", "inscriptions closes", "en présentiel hors de France"]
   },
 
   "sources": {
-    "priorite": ["devpost", "agorize", "mlh", "lablab", "devfolio", "unstop", "ctftime"],
-    "a_tester": ["dev.events", "kaggle (API avec clé)"],
-    "manuel": ["newsletters ESSEC", "Station F"]
+    "priorite": ["devpost", "agorize", "luma (Paris, mot-clé hackathon)", "nvidia open hackathons (openhackathons.org)", "mlh", "lablab", "devfolio", "unstop", "ctftime"],
+    "a_tester": ["dev.events", "genci.fr/evenements (hackathons IDRIS / NVIDIA)", "kaggle (API avec clé)"],
+    "manuel": ["newsletters ESSEC", "Station F"],
+    "evenements_recurrents_paris": ["RAISE Summit (juillet, hackathon IA)", "VivaTech (juin)", "GOSIM Paris (mai, hackathon agentique)", "IDRIS Open Hackathon NVIDIA (mai, Orsay + distanciel)"]
   },
 
   "notification": {

@@ -53,7 +53,8 @@ Légende : 🧑 = à faire par toi · 🤖 = Claude Code · modèle conseillé e
 
 ## Phase 4 — Autres sources 🤖 [Sonnet, une source = une petite tâche]
 
-Ordre : lablab.ai → Agorize → MLH → Devfolio → Unstop (API interne) → dev.events.
+Ordre : Luma Paris → NVIDIA Open Hackathons → Agorize → lablab.ai → MLH → Devfolio → Unstop (API interne) → dev.events / GENCI.
+Filtre géographique : uniquement en distanciel, à Paris ou ailleurs en France.
 Pour chacune : sauvegarder une page en fixture → écrire le parser → test → commit.
 - ✅ Terminé quand : toutes les sources passent leurs tests.
 
