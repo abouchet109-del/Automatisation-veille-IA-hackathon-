@@ -58,7 +58,7 @@ def main(argv: list[str] | None = None) -> int:
             for s in to_send + (sorted(below, key=lambda s: -s.score) if args.all else []):
                 mark = "*" if s in to_send else " "
                 h = s.hackathon
-                print(f"{mark} {s.score:.2f} [{s.axe}] [{h.source}] {h.title} | {h.location} | "
+                print(f"{mark} {s.score:.3f} [{s.axe}] [{h.source}] {h.title} | {h.location} | "
                       f"{h.prize or '-'}")
                 print(f"      {'; '.join(s.raisons) or '-'} | {h.url}")
             return 0

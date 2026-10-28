@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import re
 import time
 from datetime import datetime
 
@@ -9,13 +10,24 @@ from hackwatch.models import Hackathon
 
 API = "https://ctftime.org/api/v1/events/"
 HEADERS = {"User-Agent": "Mozilla/5.0 hackwatch"}
+PRIZE_MAX = 60
+CURRENCY = re.compile(r"[$€£₹]|\b(?:USD|EUR|INR)\b", re.IGNORECASE)
+
+
+def short_prize(raw: str) -> str:
+    """Texte libre CTFtime -> une ligne d'environ 60 caractères ; vide s'il n'annonce aucun montant."""
+    text = re.sub(r"\s+", " ", raw or "").strip()
+    if not CURRENCY.search(text):
+        return ""  # "TBA", "See https://…", récompenses non monétaires
+    if len(text) <= PRIZE_MAX:
+        return text
+    return text[:PRIZE_MAX].rsplit(" ", 1)[0].rstrip(" ,;:+-(") + "…"
 
 
 def parse(events: list[dict]) -> list[Hackathon]:
     out = []
     for e in events:
         online = not e.get("onsite", False)
-        prizes = (e.get("prizes") or "").strip()
         out.append(
             Hackathon(
                 title=e["title"],
@@ -25,7 +37,7 @@ def parse(events: list[dict]) -> list[Hackathon]:
                 end=datetime.fromisoformat(e["finish"]),
                 location="Online" if online else e.get("location", ""),
                 is_online=online,
-                prize="" if prizes.upper() == "TBD" else prizes[:80],
+                prize=short_prize(e.get("prizes") or ""),
                 tags=["CTF", "cybersecurity", e.get("format", "")],
                 description=(e.get("description") or "")[:500],
                 registration_open=e.get("restrictions", "Open") == "Open",

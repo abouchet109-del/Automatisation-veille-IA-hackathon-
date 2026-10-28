@@ -11,23 +11,27 @@
     "ia_technique": {
       "poids": 1.0,
       "description": "Hackathons IA techniques : cybersécurité/IA, agents et harness LLM, IA appliquée",
-      "mots_cles": ["AI", "LLM", "agents", "agentic", "harness", "RAG", "AI security", "cybersecurity", "red teaming", "CTF", "MCP", "evals"]
+      "mots_cles": ["LLM", "agent", "agentic", "multi-agent", "harness", "RAG", "AI security", "AI safety", "red teaming", "prompt injection", "MCP", "evals", "generative AI", "GenAI", "deep learning"],
+      "mots_generiques": ["AI", "cybersecurity", "CTF", "security"]
     },
     "gains_entrepreneurial": {
       "poids": 0.8,
       "description": "Hackathons/challenges business et entrepreneuriaux, peu techniques, à fort prize : en enchaîner beaucoup avec l'IA pour progresser vite",
-      "mots_cles": ["startup", "business", "innovation", "pitch", "case", "challenge", "entrepreneurship", "venture"],
+      "mots_cles": ["startup", "entrepreneurship", "founder", "pitch", "venture", "business case", "case competition"],
+      "mots_generiques": ["business", "innovation", "challenge", "fintech", "e-commerce"],
       "bonus_si": ["prize >= 1000 EUR", "livrable = pitch / prototype léger", "durée courte"]
     },
     "opportunites_pro": {
       "poids": 0.9,
       "description": "Hackathons qui mènent à des stages/jobs en tech : sponsors labs IA, big tech, startups IA, recrutement",
-      "mots_cles": ["recruiting", "internship", "hiring", "OpenAI", "Anthropic", "Google", "Mistral", "Hugging Face", "NVIDIA", "Meta"]
+      "mots_cles": ["recruiting", "internship", "hiring", "career", "OpenAI", "Anthropic", "Google", "DeepMind", "Mistral", "Hugging Face", "NVIDIA", "Meta", "AWS", "Amazon", "Microsoft", "Nebius", "Atlassian", "PayPal", "IBM", "Databricks", "Cohere", "Codex", "Kiro", "Devin"],
+      "mots_generiques": ["sponsor", "MLH"]
     },
     "deeptech": {
       "poids": 0.7,
       "description": "Deeptech : santé, quantique, ingénierie",
-      "mots_cles": ["health", "medtech", "biotech", "quantum", "qiskit", "engineering", "climate", "robotics"]
+      "mots_cles": ["medtech", "biotech", "quantum", "qiskit", "robotics", "satellite", "drug discovery", "bioinformatics"],
+      "mots_generiques": ["health", "engineering", "climate", "IoT", "hardware"]
     }
   },
 
@@ -48,6 +52,6 @@
   "notification": {
     "canal": "email",
     "frequence": "quotidienne (à confirmer)",
-    "score_min": 0.6
+    "score_min": 0.55
   }
 }

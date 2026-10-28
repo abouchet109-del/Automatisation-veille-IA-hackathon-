@@ -35,7 +35,7 @@ def parse_dates(text: str) -> tuple[datetime | None, datetime | None]:
 
 def _prize(raw: str) -> str:
     amount = html.unescape(re.sub(r"<[^>]+>", "", raw or "")).strip()
-    return amount if amount.lstrip("$") not in ("", "0") else ""
+    return amount if re.search(r"[1-9]", amount) else ""  # "$0", "€0", "₹ 0" : pas de prize
 
 
 def parse(data: dict) -> list[Hackathon]:
