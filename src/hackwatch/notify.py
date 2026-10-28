@@ -24,7 +24,23 @@ def _item(s: Scored) -> str:
             f'<br><small>{html.escape("; ".join(s.raisons))}</small></li>')
 
 
-def render(items: list[Scored], n_below: int = 0, failed: list[str] | None = None) -> str:
+MAX_OTHERS = 150
+
+
+def _other_row(s: Scored) -> str:
+    h = s.hackathon
+    when = f"{h.start:%d/%m/%Y}" if h.start else "?"
+    if h.end:
+        when += f" → {h.end:%d/%m/%Y}"
+    warn = " ⚠ éligibilité restreinte" if any("éligibilité" in r for r in s.raisons) else ""
+    cells = (f"{s.score:.2f}", f'<a href="{html.escape(h.url)}">{html.escape(h.title)}</a>{warn}',
+             html.escape(when), html.escape(h.location or ("en ligne" if h.is_online else "")),
+             html.escape(h.prize or ""))
+    return "<tr>" + "".join(f'<td style="padding:2px 8px">{c}</td>' for c in cells) + "</tr>"
+
+
+def render(items: list[Scored], others: list[Scored] | None = None, failed: list[str] | None = None) -> str:
+    others = others or []
     groups: dict[str, list[Scored]] = {}
     for s in items:  # items déjà triés par score : l'ordre des axes suit le meilleur score
         groups.setdefault(s.axe, []).append(s)
@@ -33,26 +49,32 @@ def render(items: list[Scored], n_below: int = 0, failed: list[str] | None = Non
         + "".join(_item(s) for s in group) + "</ul>"
         for axe, group in groups.items()
     )
-    foot = f'<p style="color:#777">{n_below} autres hackathons sous le seuil</p>'
+    if others:
+        rows = "".join(_other_row(s) for s in others[:MAX_OTHERS])
+        more = f"<p>… et {len(others) - MAX_OTHERS} autres</p>" if len(others) > MAX_OTHERS else ""
+        body += (f"<h2>Autres hackathons (en ligne ou à Paris/IDF, sous le seuil de pertinence) : "
+                 f'{len(others)}</h2><table style="font-size:13px;border-collapse:collapse">{rows}</table>{more}')
+    foot = ""
     if failed:
-        foot += f'<p style="color:#a00">Sources en échec : {html.escape(", ".join(failed))}</p>'
-    return f"<html><body><h2>{len(items)} hackathons pour toi</h2>{body}{foot}</body></html>"
+        foot = f'<p style="color:#a00">Sources en échec : {html.escape(", ".join(failed))}</p>'
+    return f"<html><body><h2>{len(items)} hackathons principaux</h2>{body}{foot}</body></html>"
 
 
-def build_message(items: list[Scored], sender: str, to: str, n_below: int = 0,
+def build_message(items: list[Scored], sender: str, to: str, others: list[Scored] | None = None,
                   failed: list[str] | None = None) -> EmailMessage:
+    others = others or []
     msg = EmailMessage()
-    msg["Subject"] = f"Hackathons du {date.today():%d/%m/%Y} : {len(items)} pour toi"
+    msg["Subject"] = f"Hackathons du {date.today():%d/%m/%Y} : {len(items)} principaux, {len(others)} autres"
     msg["From"] = sender
     msg["To"] = to
     msg.set_content("\n".join(f"- {s.hackathon.title} ({s.score:.2f}) : {s.hackathon.url}" for s in items)
-                    + f"\n\n{n_below} autres hackathons sous le seuil"
+                    + f"\n\n{len(others)} autres hackathons sous le seuil"
                     + (f"\nSources en échec : {', '.join(failed)}" if failed else ""))
-    msg.add_alternative(render(items, n_below, failed), subtype="html")
+    msg.add_alternative(render(items, others, failed), subtype="html")
     return msg
 
 
-def send(items: list[Scored], n_below: int = 0, failed: list[str] | None = None) -> None:
+def send(items: list[Scored], others: list[Scored] | None = None, failed: list[str] | None = None) -> None:
     load_dotenv()
     try:
         sender, password, to = (os.environ[k] for k in ("GMAIL_ADDRESS", "GMAIL_APP_PASSWORD", "EMAIL_TO"))
@@ -60,7 +82,7 @@ def send(items: list[Scored], n_below: int = 0, failed: list[str] | None = None)
         raise RuntimeError(f"Variable manquante dans .env : {e.args[0]}") from None
     if not (sender and password and to):
         raise RuntimeError("Identifiants Gmail vides dans .env")
-    msg = build_message(items, sender, to, n_below, failed)
+    msg = build_message(items, sender, to, others, failed)
     with smtplib.SMTP_SSL("smtp.gmail.com", 465, context=ssl.create_default_context()) as s:
         s.login(sender, password)
         s.send_message(msg)

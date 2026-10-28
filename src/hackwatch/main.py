@@ -66,6 +66,7 @@ def main(argv: list[str] | None = None) -> int:
     p.add_argument("--dry-run", action="store_true", help="afficher au lieu d'envoyer")
     p.add_argument("--all", action="store_true",
                    help="avec --dry-run : montrer aussi les éléments sous le seuil ou déjà envoyés (calibrage)")
+    p.add_argument("--preview", metavar="FICHIER", help="écrire le HTML de l'email dans un fichier, sans envoi ni marquage")
     args = p.parse_args(argv)
     sys.stdout.reconfigure(encoding="utf-8")
 
@@ -94,12 +95,17 @@ def main(argv: list[str] | None = None) -> int:
                       f"{h.prize or '-'}")
                 print(f"      {'; '.join(s.raisons) or '-'} | {h.url}")
             return 0
-        if not to_send:
-            print(f"Rien de pertinent ({len(below)} sous le seuil).")
+        if args.preview:
+            with open(args.preview, "w", encoding="utf-8") as f:
+                f.write(notify.render(to_send, below, failed))
+            print(f"Aperçu écrit : {args.preview} ({len(to_send)} principaux, {len(below)} autres).")
             return 0
-        notify.send(to_send, len(below), failed)
-        store.mark_sent([s.hackathon for s in to_send])  # les sous-seuil restent non envoyés
-        print(f"{len(to_send)} hackathons envoyés.")
+        if not to_send and not below:
+            print("Rien de nouveau.")
+            return 0
+        notify.send(to_send, below, failed)
+        store.mark_sent([s.hackathon for s in to_send + below])
+        print(f"{len(to_send)} principaux et {len(below)} autres envoyés.")
         return 0
     finally:
         store.close()

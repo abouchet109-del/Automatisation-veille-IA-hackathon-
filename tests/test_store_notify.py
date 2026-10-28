@@ -24,9 +24,9 @@ def test_dry_run_does_not_mark(tmp_path):
 
 
 def test_message_escapes_html():
-    m = build_message([Scored(hk("https://a.b"), 0.7, "ia_technique", ["r"])], "a@b.c", "d@e.f", 4)
+    m = build_message([Scored(hk("https://a.b"), 0.7, "ia_technique", ["r"])], "a@b.c", "d@e.f", [Scored(hk("https://o.p"), 0.1, "", [])] * 4)
     body = m.get_body(("html",)).get_content()
-    assert "&lt;b&gt;" in body and "https://a.b" in body and "4 autres hackathons sous le seuil" in body
+    assert "&lt;b&gt;" in body and "https://a.b" in body and ": 4</h2>" in body
 
 
 def test_store_path_from_env(tmp_path, monkeypatch):
@@ -37,6 +37,6 @@ def test_store_path_from_env(tmp_path, monkeypatch):
 
 def test_message_shows_failed_sources():
     s = [Scored(hk("https://a.b"), 0.7, "ia_technique", ["r"])]
-    body = build_message(s, "a@b.c", "d@e.f", 0, ["luma", "mlh"]).get_body(("html",)).get_content()
+    body = build_message(s, "a@b.c", "d@e.f", [], ["luma", "mlh"]).get_body(("html",)).get_content()
     assert "Sources en échec : luma, mlh" in body
     assert "Sources en échec" not in build_message(s, "a@b.c", "d@e.f").get_body(("html",)).get_content()

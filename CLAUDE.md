@@ -21,6 +21,7 @@ Plan de travail par phases : `PLAN.md`. Une session = une phase.
 - `store.py` : SQLite `hackwatch.db`, dédoublonnage par URL, trace des envois.
 - `notify.py` : email HTML via SMTP Gmail (SSL 465).
 - `main.py` : collecte → filtre → nouveautés → email (`--dry-run` pour afficher ; `--all` ajoute les éléments sous le seuil ou déjà envoyés, pour calibrer).
+- Email : « principaux » (score ≥ seuil, groupés par axe) + tableau « Autres » (reste de ce qui passe les filtres, tronqué à 150) ; les deux sont marqués envoyés. `--preview f.html` écrit le HTML sans envoi ni marquage.
 
 ## Sources (phase 4)
 - Actives : devpost, ctftime, luma (flux Paris + détail des candidats), agorize (API JSON, challenges ouverts, marqués en ligne), lablab (RSC Next.js), mlh (JSON Inertia ; aucun événement en ligne/Paris actuellement), devfolio (lieu absent : seulement les événements en ligne), unstop (API, 5 pages), dev.events (JSON-LD ; hackathons en ligne).

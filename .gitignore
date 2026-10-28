@@ -6,3 +6,4 @@ __pycache__/
 !state/hackwatch.db
 .pytest_cache/
 *.egg-info/
+apercu-email.html
