@@ -3,7 +3,7 @@ from datetime import datetime
 from pathlib import Path
 
 from hackwatch import filters
-from hackwatch.sources import agorize, ctftime, devpost, luma
+from hackwatch.sources import agorize, ctftime, devpost, lablab, luma
 
 FX = Path(__file__).parent / "fixtures"
 
@@ -87,3 +87,20 @@ def test_agorize_parse_open_only():
 def test_agorize_deadline_passed():
     fx = load("agorize.json")
     assert agorize.parse(fx, now=datetime(2027, 6, 1)) == []
+
+
+def test_lablab_parse():
+    page = (FX / "lablab.html").read_text(encoding="utf-8")
+    assert len(lablab.extract(page)) == 4
+    items = lablab.parse(page, now=datetime(2026, 10, 28))
+    assert [h.title for h in items] == ["AMD AI League", "Vultr: Agent Rush Hackathon"]
+    amd, vultr = items
+    assert amd.is_online and amd.location == "Online" and amd.url == "https://lablab.ai/event/amd-lablab-ai-academy-challenge"
+    # hybride : pas marqué « en ligne » d'office, mais le lieu « Hybrid » passe le filtre
+    assert not vultr.is_online and "Hybrid" in vultr.location
+    assert all(filters.keep(h) for h in items)
+
+
+def test_lablab_all_past():
+    page = (FX / "lablab.html").read_text(encoding="utf-8")
+    assert lablab.parse(page, now=datetime(2027, 6, 1)) == []
