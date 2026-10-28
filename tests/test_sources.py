@@ -3,7 +3,7 @@ from datetime import datetime
 from pathlib import Path
 
 from hackwatch import filters
-from hackwatch.sources import agorize, ctftime, devpost, lablab, luma, mlh
+from hackwatch.sources import agorize, ctftime, devfolio, devpost, lablab, luma, mlh
 
 FX = Path(__file__).parent / "fixtures"
 
@@ -121,3 +121,18 @@ def test_mlh_digital_and_ended():
     digital = mlh.parse(page, now=datetime(2026, 10, 28))
     assert any(h.is_online and h.location == "Online" and filters.keep(h) for h in digital)
     assert not any(h.registration_open for h in mlh.parse(page, now=datetime(2027, 6, 1)))
+
+
+def test_devfolio_parse():
+    page = (FX / "devfolio.html").read_text(encoding="utf-8")
+    items = devfolio.parse(page, now=datetime(2026, 10, 28))
+    assert len(items) == 4  # open (3) + upcoming (1), pas past
+    assert all(h.url.endswith(".devfolio.co/") and h.source == "devfolio" for h in items)
+    assert sum(h.is_online for h in items) == 1
+    kept = [h for h in items if filters.keep(h)]
+    assert len(kept) == 1 and kept[0].is_online  # lieu physique inconnu : écarté
+
+
+def test_devfolio_registration_closed():
+    page = (FX / "devfolio.html").read_text(encoding="utf-8")
+    assert not any(h.registration_open for h in devfolio.parse(page, now=datetime(2027, 6, 1)))
