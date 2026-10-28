@@ -11,13 +11,13 @@
     "ia_technique": {
       "poids": 1.0,
       "description": "Hackathons IA techniques : cybersécurité/IA, agents et harness LLM, IA appliquée",
-      "mots_cles": ["LLM", "agent", "agentic", "multi-agent", "harness", "RAG", "AI security", "AI safety", "red teaming", "prompt injection", "MCP", "evals", "generative AI", "GenAI", "deep learning"],
-      "mots_generiques": ["AI", "cybersecurity", "CTF", "security"]
+      "mots_cles": ["LLM", "agent", "agentic", "multi-agent", "harness", "RAG", "AI security", "AI safety", "red teaming", "prompt injection", "MCP", "evals", "generative AI", "GenAI", "deep learning", "generathon", "genai-thon", "buildathon", "AI content", "datathon"],
+      "mots_generiques": ["AI", "cybersecurity", "CTF", "security", "generative"]
     },
     "gains_entrepreneurial": {
       "poids": 0.8,
       "description": "Hackathons/challenges business et entrepreneuriaux, peu techniques, à fort prize : en enchaîner beaucoup avec l'IA pour progresser vite",
-      "mots_cles": ["startup", "entrepreneurship", "founder", "pitch", "venture", "business case", "case competition"],
+      "mots_cles": ["startup", "entrepreneurship", "founder", "pitch", "venture", "business case", "case competition", "ideathon"],
       "mots_generiques": ["business", "innovation", "challenge", "fintech", "e-commerce"],
       "bonus_si": ["prize >= 1000 EUR", "livrable = pitch / prototype léger", "durée courte"]
     },
@@ -36,10 +36,10 @@
   },
 
   "contraintes": {
-    "formats": ["online (distanciel)", "Paris / Île-de-France", "France"],
+    "formats": ["online (distanciel)", "Paris / Île-de-France"],
     "eligibilite": ["étudiants", "ouvert à tous", "solo accepté ou formation d'équipe sur place"],
     "niveau_accepte": ["beginner-friendly", "intermédiaire"],
-    "exclure": ["réservé à une autre école/université", "inscriptions closes", "en présentiel hors de France"]
+    "exclure": ["réservé à une autre école/université", "inscriptions closes", "présentiel hors Paris / Île-de-France"]
   },
 
   "sources": {
@@ -51,7 +51,7 @@
 
   "notification": {
     "canal": "email",
-    "frequence": "quotidienne (à confirmer)",
+    "frequence": "dimanche et lundi, 8 h (Paris)",
     "score_min": 0.55
   }
 }

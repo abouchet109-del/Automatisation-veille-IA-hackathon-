@@ -4,6 +4,7 @@ import math
 import re
 from dataclasses import dataclass, field
 
+from hackwatch.filters import is_idf
 from hackwatch.models import Hackathon
 
 # Poids d'un mot-clé selon l'endroit où il apparaît, et selon qu'il est spécifique ou générique.
@@ -12,7 +13,6 @@ GENERIC_WEIGHT = 0.4
 SATURATION = 1.2  # axe = poids * (1 - exp(-raw / SATURATION)) : progressif, n'atteint jamais 1
 MULTI_AXE_BONUS, MULTI_AXE_MIN, MULTI_AXE_MAX = 0.05, 0.2, 0.1
 
-LOCAL_WORDS = ("paris", "france", "île-de-france", "ile-de-france")
 BEGINNER_WORDS = ("beginner", "student", "étudiant")
 EXCLUSION_PATTERNS = (
     r"\bUS residents only\b",
@@ -25,10 +25,13 @@ EXCLUSION_PATTERNS = (
     r"\bhigh school students only\b",
     r"\bteens?\b",
 )
-# Qualification en ligne d'un CTF dont la finale a lieu sur place (presque toujours hors de France).
+# Qualification en ligne d'un CTF dont la finale a lieu sur place (presque toujours loin de Paris).
 QUALIFIER_PATTERN = r"\b(?:qualif\w*|quals|prelims?)\b"
 QUALIFIER_MALUS = 0.3
 INR_TO_EUR = 0.011
+# Formats « -thon » non classiques (pas hackathon, ni marathon / python / téléthon).
+FORMAT_PATTERN = r"(?<!\w)(?:genera|gen-?ai-?|builda|data|idea)-?thons?(?!\w)"
+FORMAT_BONUS = 0.05
 
 AXE_LABELS = {
     "ia_technique": "IA technique",
@@ -50,6 +53,8 @@ def _token_regex(tok: str) -> str:
     """Mot en minuscules : insensible à la casse, pluriel en s accepté.
     Mot avec majuscules (acronyme, marque) : casse exacte ou tout en majuscules ("AI" ne matche pas "ai")."""
     if tok.islower():
+        if tok.endswith("thon") and len(tok) > 4:  # "datathon" matche aussi "DATA-THON"
+            return f"(?i:{re.escape(tok[:-4].rstrip('-'))}-?thons?)"
         return f"(?i:{re.escape(tok)}s?)"
     variants = {re.escape(tok), re.escape(tok.upper())}
     plural = "s?" if tok.isupper() else ""
@@ -92,6 +97,9 @@ def _axe_hits(h: Hackathon, cfg: dict) -> tuple[float, list[tuple[float, str]]]:
     hits = []
     for kws, kw_weight in ((cfg.get("mots_cles", []), 1.0), (cfg.get("mots_generiques", []), GENERIC_WEIGHT)):
         for kw in kws:
+            # Un générique contenu dans un spécifique déjà trouvé ("AI" dans "AI security") ne compte pas deux fois.
+            if kw_weight < 1 and any(kw.lower() in k.lower().split() for _, k in hits):
+                continue
             rx = keyword_regex(kw)
             where = max((FIELD_WEIGHTS[f] for f, txt in fields.items() if rx.search(txt)), default=0.0)
             if where:
@@ -115,8 +123,8 @@ def score(h: Hackathon, profile: dict) -> Scored:
     if others:
         total += min(MULTI_AXE_MAX, MULTI_AXE_BONUS * len(others))
         raisons.append("aussi " + ", ".join(AXE_LABELS.get(a, a) for a in others))
-    loc = h.location.lower()
-    if any(w in loc for w in LOCAL_WORDS):
+    local = is_idf(h.location)  # présentiel possible à Paris / IDF (hybride compris)
+    if local:
         total += 0.15
         raisons.insert(1, f"lieu : {h.location}")
     prize = parse_prize(h.prize)
@@ -126,10 +134,14 @@ def score(h: Hackathon, profile: dict) -> Scored:
     text = " ".join([h.title, *h.tags, h.description])
     if any(_has_word(w, text) for w in BEGINNER_WORDS):
         total += 0.05
+    fmt = re.search(FORMAT_PATTERN, f"{h.title} {' '.join(h.tags)}", re.IGNORECASE)
+    if fmt:
+        total += FORMAT_BONUS
+        raisons.append(f"format {fmt.group(0).lower()}")
     if any(re.search(p, f"{h.title} {h.description}", re.IGNORECASE) for p in EXCLUSION_PATTERNS):
         total -= 0.5
         raisons.insert(0, "restriction d'éligibilité")
-    if re.search(QUALIFIER_PATTERN, h.title, re.IGNORECASE) and not any(w in loc for w in LOCAL_WORDS):
+    if re.search(QUALIFIER_PATTERN, h.title, re.IGNORECASE) and not local:
         total -= QUALIFIER_MALUS
         raisons.insert(0, "qualification, finale sur place à l'étranger")
     return Scored(h, round(min(1.0, max(0.0, total)), 3), best_axe, raisons[:3])

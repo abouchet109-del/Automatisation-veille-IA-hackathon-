@@ -150,3 +150,39 @@ def test_llm_repli_sur_erreur(monkeypatch):
     assert llm.rescore(s, PROFILE, FakeClient("pas du json")) == s
     monkeypatch.setattr(llm, "enabled", lambda: False)
     assert llm.rescore(s, PROFILE) == s  # inerte sans clé
+
+
+def test_filtre_paris_idf():
+    from hackwatch.filters import keep
+    for loc in ("Paris, France", "ESSEC, Cergy", "Université Paris-Saclay", "Station F", "Évry-Courcouronnes",
+                "Issy-les-Moulineaux", "Ile de France"):
+        assert keep(hk(location=loc)), loc
+    for loc in ("Lyon, France", "Bordeaux", "Boulogne-sur-Mer", "Saint-Denis, La Réunion", "Berlin"):
+        assert not keep(hk(location=loc)), loc
+    assert keep(hk(location="Online", is_online=True))
+    assert keep(hk(location="Hybrid — Lyon + online"))  # hybride participable à distance
+    assert not keep(hk(location="Paris", registration_open=False))
+
+
+def test_bonus_local_idf_seulement():
+    base = sc("LLM hackathon").score
+    assert sc("LLM hackathon", location="Cergy").score == pytest.approx(base + 0.15)
+    assert sc("LLM hackathon", location="Lyon, France").score == pytest.approx(base)
+    assert sc("LLM hackathon", location="Online", is_online=True).score == pytest.approx(base)
+
+
+def test_generathon_et_formats_thon():
+    from hackwatch.main import load_profile
+    prof = load_profile()
+    gen = score(hk("Generathon Le Motif : 24 h de création de contenus IA", location="Paris"), prof)
+    assert gen.axe == "ia_technique" and gen.score >= prof["notification"]["score_min"]
+    assert "format generathon" in gen.raisons and "lieu : Paris" in gen.raisons
+    assert score(hk("Generathon", location="Online", is_online=True), prof).score >= prof["notification"]["score_min"]
+    assert "format buildathon" in score(hk("AIgnite Buildathon 2026"), prof).raisons
+    assert "format genai-thon" in score(hk("GenAI-thon Paris"), prof).raisons
+    assert score(hk("GLOBAL DATA-THON"), prof).axe == "ia_technique"
+    assert score(hk("Social Ideathon"), prof).axe == "gains_entrepreneurial"
+    for title in ("Python marathon", "Téléthon 2026", "Hackathon"):  # pas de bonus de format
+        assert not any(r.startswith("format") for r in score(hk(title), prof).raisons), title
+    one = score(hk("generative AI jam"), prof)
+    assert one.raisons[0] == "axe IA technique : generative AI"  # "generative" et "AI" ne comptent pas en double
