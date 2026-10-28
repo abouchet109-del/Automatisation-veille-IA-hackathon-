@@ -196,3 +196,22 @@ def test_dedupe_same_title_across_sources():
     b = Hackathon(title="Qloo  Agentic-Hackathon", url="https://dev.events/x", source="dev.events")
     c = Hackathon(title="Autre", url="https://dev.events/y", source="dev.events")
     assert dedupe([a, b, c]) == [a, c]
+
+
+def test_luma_calendar_feed_and_merge():
+    page = (FX / "luma_calendar.html").read_text(encoding="utf-8")
+    cal = luma.calendar_feed(page)
+    assert len(cal["entries"]) == 2
+    items = luma.parse(cal)
+    assert [h.title for h in items] == [e["event"]["name"] for e in cal["entries"]]  # calendrier « Generathon »
+    assert all(h.registration_open and filters.keep(h) for h in items)
+    paris = load("luma.json")["feed"]
+    merged = luma.merge([paris, cal, cal])
+    ids = [e["event"]["api_id"] for e in merged["entries"]]
+    assert len(ids) == len(set(ids)) and len(ids) == len(paris["entries"]) + 1  # Horror Demo Night en commun
+
+
+def test_luma_calendar_urls_in_profile():
+    urls = luma.calendar_urls()
+    assert "https://luma.com/generathon" in urls and all(u.startswith("https://luma.com/") for u in urls)
+    assert luma.calendar_urls(Path("inexistant.json")) == []

@@ -43,6 +43,7 @@
   },
 
   "sources": {
+    "luma_calendriers": ["https://luma.com/generathon", "https://luma.com/stationf", "https://luma.com/vivatech"],
     "priorite": ["devpost", "agorize", "luma (Paris, mot-clé hackathon)", "nvidia open hackathons (openhackathons.org)", "mlh", "lablab", "devfolio", "unstop", "ctftime"],
     "a_tester": ["dev.events", "genci.fr/evenements (hackathons IDRIS / NVIDIA)", "kaggle (API avec clé)"],
     "manuel": ["newsletters ESSEC", "Station F"],

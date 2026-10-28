@@ -1,7 +1,10 @@
 from __future__ import annotations
 
+import json
 import re
+import sys
 from datetime import datetime
+from pathlib import Path
 
 import httpx
 
@@ -13,7 +16,7 @@ DETAIL = "https://api.lu.ma/event/get"
 PARIS = "discplace-NdLrh1xJfeotJZC"
 HEADERS = {"User-Agent": "hackwatch/0.1 (veille perso de hackathons ; usage non commercial)"}
 KEYWORDS = re.compile(r"\b(hack|generathon|buildathon|datathon|ideathon|game[ -]?jam)", re.I)
-MAX_DETAILS = 10  # une requête de plus par candidat (titre ou calendrier correspondant), plafonné
+MAX_DETAILS = 15  # une requête de plus par candidat (titre ou calendrier correspondant), plafonné
 
 
 def _text(node) -> str:
@@ -73,11 +76,52 @@ def parse(feed: dict, details: dict[str, dict] | None = None) -> list[Hackathon]
     return out
 
 
+_NEXT = re.compile(r'<script id="__NEXT_DATA__" type="application/json">(.*?)</script>', re.S)
+PROFILE = Path(__file__).resolve().parents[3] / "profile.json"
+
+
+def calendar_feed(page: str) -> dict:
+    """Événements à venir d'une page de calendrier public (https://luma.com/<slug>), au même format
+    que le flux Paris : {"entries": [...]}."""
+    m = _NEXT.search(page)
+    if not m:
+        raise ValueError("__NEXT_DATA__ introuvable sur la page du calendrier Luma")
+    data = json.loads(m.group(1))["props"]["pageProps"]["initialData"]["data"]
+    return {"entries": (data.get("upcoming") or {}).get("entries", [])}
+
+
+def merge(feeds: list[dict]) -> dict:
+    """Fusionne plusieurs flux sans doublon d'événement (même api_id)."""
+    seen: set[str] = set()
+    entries = []
+    for feed in feeds:
+        for e in feed.get("entries", []):
+            if e["event"]["api_id"] not in seen:
+                seen.add(e["event"]["api_id"])
+                entries.append(e)
+    return {"entries": entries}
+
+
+def calendar_urls(path: Path = PROFILE) -> list[str]:
+    try:
+        return json.loads(path.read_text(encoding="utf-8"))["sources"].get("luma_calendriers", [])
+    except (OSError, ValueError, KeyError):
+        return []
+
+
 def fetch(client: httpx.Client | None = None) -> list[Hackathon]:
     client = client or httpx.Client(headers=HEADERS, timeout=30)
     r = client.get(FEED, params={"discover_place_api_id": PARIS, "pagination_limit": 50})
     r.raise_for_status()
-    feed = r.json()
+    feeds = [r.json()]
+    for url in calendar_urls():  # une page par calendrier ; un calendrier en échec ne bloque pas les autres
+        try:
+            page = client.get(url, follow_redirects=True)
+            page.raise_for_status()
+            feeds.append(calendar_feed(page.text))
+        except Exception as e:
+            print(f"[warn] calendrier Luma {url} en échec : {e}", file=sys.stderr)
+    feed = merge(feeds)
     details = {}
     for api_id in candidates(feed)[:MAX_DETAILS]:
         d = client.get(DETAIL, params={"event_api_id": api_id})
