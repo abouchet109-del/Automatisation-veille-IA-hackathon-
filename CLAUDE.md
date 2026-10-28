@@ -22,6 +22,12 @@ Plan de travail par phases : `PLAN.md`. Une session = une phase.
 - `notify.py` : email HTML via SMTP Gmail (SSL 465).
 - `main.py` : collecte → filtre → nouveautés → email (`--dry-run` pour afficher ; `--all` ajoute les éléments sous le seuil ou déjà envoyés, pour calibrer).
 
+## Sources (phase 4)
+- Actives : devpost, ctftime, luma (flux Paris + détail des candidats), agorize (API JSON, challenges ouverts, marqués en ligne), lablab (RSC Next.js), mlh (JSON Inertia ; aucun événement en ligne/Paris actuellement), devfolio (lieu absent : seulement les événements en ligne), unstop (API, 5 pages), dev.events (JSON-LD ; hackathons en ligne).
+- Abandonnées : NVIDIA Open Hackathons (Salesforce Aura, 100 % JS, pas de données dans le HTML ni dans le sitemap), GENCI (HTML sans données structurées, hackathons déjà passés).
+- `main.dedupe` retire les doublons de titre entre sources (ordre de `SOURCES`).
+- Piège : un parser ne doit pas marquer « en ligne » un événement hybride ou sans lieu ; en cas de doute `is_online=False` + lieu brut.
+
 ## Conventions
 - Tests sur fixtures dans `tests/fixtures/` (réponses réelles tronquées), jamais d'appel réseau.
 - Nouvelle source : sauvegarder une fixture, écrire `parse`, tester, committer.
