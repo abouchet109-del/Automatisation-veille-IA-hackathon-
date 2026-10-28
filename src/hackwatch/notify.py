@@ -57,7 +57,8 @@ def render(items: list[Scored], others: list[Scored] | None = None, failed: list
     foot = ""
     if failed:
         foot = f'<p style="color:#a00">Sources en échec : {html.escape(", ".join(failed))}</p>'
-    return f"<html><body><h2>{len(items)} hackathons principaux</h2>{body}{foot}</body></html>"
+    s = "s" if len(items) > 1 else ""
+    return f"<html><body><h2>{len(items)} hackathon{s} principa{'ux' if s else 'l'}</h2>{body}{foot}</body></html>"
 
 
 def build_message(items: list[Scored], sender: str, to: str, others: list[Scored] | None = None,
