@@ -13,7 +13,7 @@ $env:PIP_CACHE_DIR="D:\Tools\pip-cache"; python -m venv .venv; .venv\Scripts\pip
 
 ## Automatisation (GitHub Actions)
 
-Le workflow `.github/workflows/hackwatch.yml` tourne tout seul le dimanche et le lundi vers 8 h (Paris), PC éteint. Il garde l'historique des envois dans `state/hackwatch.db` (commité automatiquement). Si toutes les sources échouent, le workflow est en erreur et GitHub t'envoie un email.
+Le workflow `.github/workflows/hackwatch.yml` tourne tout seul le dimanche et le jeudi vers 8 h (Paris), PC éteint. Il garde l'historique des envois dans `state/hackwatch.db` (commité automatiquement). Si toutes les sources échouent, le workflow est en erreur et GitHub t'envoie un email.
 
 À faire une seule fois :
 

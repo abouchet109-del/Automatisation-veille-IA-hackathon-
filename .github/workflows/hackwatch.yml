@@ -2,7 +2,7 @@ name: Hackathon Watch
 
 on:
   schedule:
-    - cron: "0 7 * * 0,1"  # dimanche et lundi, 7 h UTC = 8 h ou 9 h à Paris
+    - cron: "0 7 * * 0,4"  # dimanche et jeudi, 7 h UTC = 8 h ou 9 h à Paris
   workflow_dispatch:
 
 permissions:

@@ -52,7 +52,7 @@
 
   "notification": {
     "canal": "email",
-    "frequence": "dimanche et lundi, 8 h (Paris)",
+    "frequence": "dimanche et jeudi, 8 h (Paris)",
     "score_min": 0.55
   }
 }

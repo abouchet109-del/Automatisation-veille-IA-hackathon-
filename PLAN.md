@@ -61,7 +61,7 @@ Pour chacune : sauvegarder une page en fixture → écrire le parser → test �
 
 ## Phase 5 — Automatisation 🤖 + 🧑 [Sonnet]
 
-- 🤖 Workflow GitHub Actions planifié **le dimanche et le lundi à 8 h (heure de Paris)**, cron `0 7 * * 0,1` en UTC. Il tourne même PC éteint et c'est gratuit pour cet usage.
+- 🤖 Workflow GitHub Actions planifié **le dimanche et le jeudi à 8 h (heure de Paris)**, cron `0 7 * * 0,4` en UTC. Il tourne même PC éteint et c'est gratuit pour cet usage.
 - 🧑 Ajouter les secrets dans GitHub → Settings → Secrets (mot de passe Gmail, clé API).
 - 🤖 Gestion d'erreurs : si une source casse, l'email le signale au lieu de planter.
 - ✅ Terminé quand : 3 jours d'emails reçus sans intervention.
