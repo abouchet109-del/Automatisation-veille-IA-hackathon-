@@ -1,8 +1,9 @@
 import json
+from datetime import datetime
 from pathlib import Path
 
 from hackwatch import filters
-from hackwatch.sources import ctftime, devpost, luma
+from hackwatch.sources import agorize, ctftime, devpost, luma
 
 FX = Path(__file__).parent / "fixtures"
 
@@ -70,3 +71,19 @@ def test_luma_registration_closed():
     for e in feed["entries"]:
         e["registration_availability"] = "sold-out"
     assert not luma.parse(feed)[0].registration_open
+
+
+def test_agorize_parse_open_only():
+    fx = load("agorize.json")
+    assert len(fx["data"]) == 6
+    items = agorize.parse(fx, now=datetime(2026, 10, 28))
+    assert len(items) == 5  # le challenge clos est exclu
+    h = items[0]
+    assert h.source == "agorize" and h.url.startswith("https://www.agorize.com/fr/challenges/")
+    assert h.is_online and h.registration_open and h.end > h.start
+    assert all(filters.keep(x) for x in items)
+
+
+def test_agorize_deadline_passed():
+    fx = load("agorize.json")
+    assert agorize.parse(fx, now=datetime(2027, 6, 1)) == []

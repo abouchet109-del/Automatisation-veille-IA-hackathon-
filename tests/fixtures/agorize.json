@@ -1,0 +1,158 @@
+{
+ "data": [
+  {
+   "id": "3105",
+   "type": "challenges",
+   "attributes": {
+    "id": 3105,
+    "available_locales": [
+     "en"
+    ],
+    "create_or_join_team_allowed_until": "2027-03-31T16:00:00.000Z",
+    "discussion_wall_enabled": false,
+    "start_at": "2026-10-26T16:00:00.000Z",
+    "awards_catchline": "",
+    "board_image_url": "https://cdn.fs.agorize.com/PMyYln3S5yeT51k0M6yg",
+    "business_type": "challenge",
+    "client": "Singapore Management University",
+    "current_deadline": "2027-03-31T16:00:00.000Z",
+    "current_step_id": 4469,
+    "logo_url": "https://cdn.fs.agorize.com/vvwuHGfTKWRSAbTYXy5g",
+    "name": "Lee Kuan Yew Global Business Plan Competition 13th Edition",
+    "slug": "lkygbpc-13th-edition",
+    "summary": "Innovation with Purpose",
+    "kind": "solo"
+   }
+  },
+  {
+   "id": "3104",
+   "type": "challenges",
+   "attributes": {
+    "id": 3104,
+    "available_locales": [
+     "fr",
+     "en"
+    ],
+    "create_or_join_team_allowed_until": "2026-11-08T23:55:00.000Z",
+    "discussion_wall_enabled": false,
+    "start_at": "2026-10-05T08:00:00.000Z",
+    "awards_catchline": "",
+    "board_image_url": "https://cdn.fs.agorize.com/6fHjPIaiSqWVJ4PKpqpv",
+    "business_type": "challenge",
+    "client": "Ferrocampus",
+    "current_deadline": "2026-11-08T23:55:00.000Z",
+    "current_step_id": 4468,
+    "logo_url": "https://cdn.fs.agorize.com/yE4TPNw6Sqi5RkTJKwVd",
+    "name": "Rail Innovation Challenge 7th",
+    "slug": "rail-innovation-challenge-7",
+    "summary": "Revolutionize everyday mobility with Ferrocampus and its partners! Win exceptional awards and meet to industry experts!",
+    "kind": "team"
+   }
+  },
+  {
+   "id": "3101",
+   "type": "challenges",
+   "attributes": {
+    "id": 3101,
+    "available_locales": [
+     "en"
+    ],
+    "create_or_join_team_allowed_until": "2026-11-19T20:00:00.000Z",
+    "discussion_wall_enabled": false,
+    "start_at": "2026-09-30T06:00:00.000Z",
+    "awards_catchline": "Cash prizes, investment to Proof of Concept and long-term development with Company",
+    "board_image_url": "https://cdn.fs.agorize.com/UFEOYqgDTuyvSZAMeT7A",
+    "business_type": "challenge",
+    "client": "Nabat",
+    "current_deadline": "2026-11-19T20:00:00.000Z",
+    "current_step_id": 4465,
+    "logo_url": "https://cdn.fs.agorize.com/2ltALmWgT0eCMi6jIpwe",
+    "name": "Nabat TerraPod Challenge",
+    "slug": "ntpc",
+    "summary": "Innovate together with ASPIRE and Nabat to push technology advancement to the next level!",
+    "kind": "solo"
+   }
+  },
+  {
+   "id": "3062",
+   "type": "challenges",
+   "attributes": {
+    "id": 3062,
+    "available_locales": [
+     "fr"
+    ],
+    "create_or_join_team_allowed_until": "2026-11-16T23:55:00.000Z",
+    "discussion_wall_enabled": false,
+    "start_at": "2026-09-14T09:00:00.000Z",
+    "awards_catchline": "Visibilité, récompenses, ",
+    "board_image_url": "https://cdn.fs.agorize.com/ZXvoVHETTHaVAJcM4PwN",
+    "business_type": "challenge",
+    "client": "GRDF / CEGIBAT",
+    "current_deadline": "2026-11-16T23:55:00.000Z",
+    "current_step_id": 4427,
+    "logo_url": "https://cdn.fs.agorize.com/07R1H6fdRLmIcLmvC8VR",
+    "name": "Concours Etudiants CEGIBAT 2026",
+    "slug": "challenge-grdf-cegibat-2026",
+    "summary": "Ma commune 2030 : réussir la transition énergétique grâce au réseau gaz 🌱🚀",
+    "kind": "team"
+   }
+  },
+  {
+   "id": "3061",
+   "type": "challenges",
+   "attributes": {
+    "id": 3061,
+    "available_locales": [
+     "en"
+    ],
+    "create_or_join_team_allowed_until": "2026-10-31T02:00:00.000Z",
+    "discussion_wall_enabled": false,
+    "start_at": "2026-09-07T10:00:00.000Z",
+    "awards_catchline": "Vouchers/gift cards for a sports and leisure retailer, mobility accessories.",
+    "board_image_url": "https://cdn.fs.agorize.com/ne3SuyQKQ2SDS5HDwCx1",
+    "business_type": "challenge",
+    "client": "Keolis",
+    "current_deadline": "2026-10-31T03:00:00.000Z",
+    "current_step_id": 4422,
+    "logo_url": "https://cdn.fs.agorize.com/4tteAXbuReiM8mxCcgXL",
+    "name": "Mobility Innovations: Imagine Tomorrow's Transports! ",
+    "slug": "mobility-2026",
+    "summary": "What do you think the public passenger transport of tomorrow will look like?",
+    "kind": "team"
+   }
+  },
+  {
+   "id": "2835",
+   "type": "challenges",
+   "attributes": {
+    "id": 2835,
+    "available_locales": [
+     "en",
+     "fr"
+    ],
+    "create_or_join_team_allowed_until": "2024-05-29T12:00:26.000Z",
+    "discussion_wall_enabled": false,
+    "start_at": null,
+    "awards_catchline": "",
+    "board_image_url": "https://cdn.filestackcontent.com/BEOTjkYfT7qTHGbmHfW7",
+    "business_type": "ideas_box",
+    "client": "Company",
+    "current_deadline": "2025-05-28T22:13:43.000Z",
+    "current_step_id": null,
+    "logo_url": "https://cdn.fs.agorize.com/9Utwrj7SQXeSMrJVsvmo",
+    "name": "💥 The next buzz idea",
+    "slug": "the-next-buzz-idea",
+    "summary": "Let's get creative and imagine our new digital marketing campaign ",
+    "kind": "solo"
+   }
+  }
+ ],
+ "meta": {
+  "page": {
+   "current_page": 1,
+   "per_page": 100,
+   "total": 735,
+   "last_page": 8
+  }
+ }
+}
