@@ -3,7 +3,7 @@ from datetime import datetime
 from pathlib import Path
 
 from hackwatch import filters
-from hackwatch.sources import agorize, ctftime, devfolio, devpost, lablab, luma, mlh, unstop
+from hackwatch.sources import agorize, ctftime, devevents, devfolio, devpost, lablab, luma, mlh, unstop
 
 FX = Path(__file__).parent / "fixtures"
 
@@ -152,3 +152,20 @@ def test_unstop_parse():
 
 def test_unstop_registration_closed():
     assert not any(h.registration_open for h in unstop.parse(load("unstop.json"), now=datetime(2027, 6, 1)))
+
+
+def test_devevents_parse():
+    page = (FX / "devevents.html").read_text(encoding="utf-8")
+    items = devevents.parse(page, now=datetime(2026, 10, 28, 12))
+    names = {h.title for h in items}
+    assert "The Principal Dev – Masterclass for Tech Leads" not in names  # pas un hackathon
+    assert {"Nebius x NVIDIA Global AI Hackathon", "PayPal AI Hackathon"} <= names
+    assert all(h.is_online and h.location == "Online" and h.source == "dev.events" for h in items)
+    ended = [h for h in items if h.title == "AWS Communication Developer Services"]
+    assert ended and not ended[0].registration_open  # fini à minuit
+
+
+def test_devevents_filter():
+    page = (FX / "devevents.html").read_text(encoding="utf-8")
+    kept = [h for h in devevents.parse(page, now=datetime(2026, 10, 28, 12)) if filters.keep(h)]
+    assert {h.title for h in kept} == {"Nebius x NVIDIA Global AI Hackathon", "PayPal AI Hackathon"}
