@@ -1,0 +1,52 @@
+{
+  "participant": {
+    "statut": "Solo pour l'instant (équipe ESSEC à venir)",
+    "formation": ["ESSEC", "L3 Mathématiques (en parallèle)"],
+    "niveau_code": "débutant en progression rapide (apprend à coder, monte en compétence sur l'IA)",
+    "forces": ["créativité", "mathématiques", "usage intensif des outils IA"],
+    "objectif_carriere": ["AI engineer", "ML engineer", "AI researcher"]
+  },
+
+  "objectifs": {
+    "ia_technique": {
+      "poids": 1.0,
+      "description": "Hackathons IA techniques : cybersécurité/IA, agents et harness LLM, IA appliquée",
+      "mots_cles": ["AI", "LLM", "agents", "agentic", "harness", "RAG", "AI security", "cybersecurity", "red teaming", "CTF", "MCP", "evals"]
+    },
+    "gains_entrepreneurial": {
+      "poids": 0.8,
+      "description": "Hackathons/challenges business et entrepreneuriaux, peu techniques, à fort prize : en enchaîner beaucoup avec l'IA pour progresser vite",
+      "mots_cles": ["startup", "business", "innovation", "pitch", "case", "challenge", "entrepreneurship", "venture"],
+      "bonus_si": ["prize >= 1000 EUR", "livrable = pitch / prototype léger", "durée courte"]
+    },
+    "opportunites_pro": {
+      "poids": 0.9,
+      "description": "Hackathons qui mènent à des stages/jobs en tech : sponsors labs IA, big tech, startups IA, recrutement",
+      "mots_cles": ["recruiting", "internship", "hiring", "OpenAI", "Anthropic", "Google", "Mistral", "Hugging Face", "NVIDIA", "Meta"]
+    },
+    "deeptech": {
+      "poids": 0.7,
+      "description": "Deeptech : santé, quantique, ingénierie",
+      "mots_cles": ["health", "medtech", "biotech", "quantum", "qiskit", "engineering", "climate", "robotics"]
+    }
+  },
+
+  "contraintes": {
+    "formats": ["online", "Paris / Île-de-France", "Europe si prise en charge des frais"],
+    "eligibilite": ["étudiants", "ouvert à tous", "solo accepté ou formation d'équipe sur place"],
+    "niveau_accepte": ["beginner-friendly", "intermédiaire"],
+    "exclure": ["réservé à une autre école/université", "inscriptions closes", "lieu hors Europe sans option en ligne"]
+  },
+
+  "sources": {
+    "priorite": ["devpost", "agorize", "mlh", "lablab", "devfolio", "unstop", "ctftime"],
+    "a_tester": ["dev.events", "kaggle (API avec clé)"],
+    "manuel": ["newsletters ESSEC", "Station F"]
+  },
+
+  "notification": {
+    "canal": "email",
+    "frequence": "quotidienne (à confirmer)",
+    "score_min": 0.6
+  }
+}
