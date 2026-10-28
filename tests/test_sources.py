@@ -169,3 +169,13 @@ def test_devevents_filter():
     page = (FX / "devevents.html").read_text(encoding="utf-8")
     kept = [h for h in devevents.parse(page, now=datetime(2026, 10, 28, 12)) if filters.keep(h)]
     assert {h.title for h in kept} == {"Nebius x NVIDIA Global AI Hackathon", "PayPal AI Hackathon"}
+
+
+def test_dedupe_same_title_across_sources():
+    from hackwatch.main import dedupe
+    from hackwatch.models import Hackathon
+
+    a = Hackathon(title="Qloo Agentic Hackathon", url="https://qloo.devpost.com/", source="devpost")
+    b = Hackathon(title="Qloo  Agentic-Hackathon", url="https://dev.events/x", source="dev.events")
+    c = Hackathon(title="Autre", url="https://dev.events/y", source="dev.events")
+    assert dedupe([a, b, c]) == [a, c]

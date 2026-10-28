@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import re
 import sys
 
 from hackwatch import filters, llm, notify, scoring
@@ -23,6 +24,20 @@ SOURCES = {
 }
 
 
+def dedupe(items: list[Hackathon]) -> list[Hackathon]:
+    """Même titre (lettres et chiffres seulement) sur plusieurs sources : on garde la première,
+    dans l'ordre de SOURCES (dev.events et Unstop reprennent des hackathons Devpost)."""
+    seen: set[str] = set()
+    out = []
+    for h in items:
+        key = re.sub(r"[\W_]+", "", h.title.lower())
+        if key and key in seen:
+            continue
+        seen.add(key)
+        out.append(h)
+    return out
+
+
 def collect() -> list[Hackathon]:
     items: list[Hackathon] = []
     for name, fetch in SOURCES.items():
@@ -30,7 +45,7 @@ def collect() -> list[Hackathon]:
             items += fetch()
         except Exception as e:  # une source cassée ne bloque pas les autres
             print(f"[warn] source {name} en échec : {e}", file=sys.stderr)
-    return items
+    return dedupe(items)
 
 
 def load_profile(path: str = "profile.json") -> dict:
