@@ -1,0 +1,215 @@
+{
+ "hackathons": [
+  {
+   "id": 31108,
+   "title": "InnovArt 2027: Art and Technology Hack Day",
+   "displayed_location": {
+    "icon": "globe",
+    "location": "Online"
+   },
+   "open_state": "open",
+   "thumbnail_url": "//d112y698adiu2z.cloudfront.net/photos/production/challenge_thumbnails/005/163/349/datas/medium_square.jpg",
+   "analytics_identifier": "InnovArt 2027: Art and Technology Hack Day (31108)",
+   "url": "https://innovart2027.devpost.com/",
+   "time_left_to_submission": "2 months left",
+   "submission_period_dates": "Aug 23, 2026 - Jan 02, 2027",
+   "themes": [
+    {
+     "id": 15,
+     "name": "Music/Art"
+    },
+    {
+     "id": 23,
+     "name": "Beginner Friendly"
+    },
+    {
+     "id": 22,
+     "name": "Open Ended"
+    }
+   ],
+   "prize_amount": "$<span data-currency-value>0</span>",
+   "prizes_counts": {
+    "cash": 0,
+    "other": 12
+   },
+   "registrations_count": 265,
+   "featured": false,
+   "organization_name": "Binnovative",
+   "winners_announced": false,
+   "submission_gallery_url": "https://innovart2027.devpost.com/project-gallery",
+   "start_a_submission_url": "https://innovart2027.devpost.com/challenges/start_a_submission",
+   "invite_only": false,
+   "eligibility_requirement_invite_only_description": null,
+   "managed_by_devpost_badge": false
+  },
+  {
+   "id": 31773,
+   "title": "LaunchPad Hacks",
+   "displayed_location": {
+    "icon": "globe",
+    "location": "Online"
+   },
+   "open_state": "open",
+   "thumbnail_url": "//d112y698adiu2z.cloudfront.net/photos/production/challenge_thumbnails/005/592/065/datas/medium_square.png",
+   "analytics_identifier": "LaunchPad Hacks (31773)",
+   "url": "https://launchpad-hacks.devpost.com/",
+   "time_left_to_submission": "24 days left",
+   "submission_period_dates": "Oct 16 - Nov 20, 2026",
+   "themes": [
+    {
+     "id": 23,
+     "name": "Beginner Friendly"
+    },
+    {
+     "id": 22,
+     "name": "Open Ended"
+    }
+   ],
+   "prize_amount": "$<span data-currency-value>300</span>",
+   "prizes_counts": {
+    "cash": 1,
+    "other": 2
+   },
+   "registrations_count": 235,
+   "featured": false,
+   "organization_name": "Hack4TodayOrg",
+   "winners_announced": false,
+   "submission_gallery_url": "https://launchpad-hacks.devpost.com/project-gallery",
+   "start_a_submission_url": "https://launchpad-hacks.devpost.com/challenges/start_a_submission",
+   "invite_only": false,
+   "eligibility_requirement_invite_only_description": null,
+   "managed_by_devpost_badge": false
+  },
+  {
+   "id": 31796,
+   "title": "SafeSpace Hacks",
+   "displayed_location": {
+    "icon": "globe",
+    "location": "Online"
+   },
+   "open_state": "open",
+   "thumbnail_url": "//d112y698adiu2z.cloudfront.net/photos/production/challenge_thumbnails/005/602/787/datas/medium_square.png",
+   "analytics_identifier": "SafeSpace Hacks (31796)",
+   "url": "https://safespace-hacks.devpost.com/",
+   "time_left_to_submission": "26 days left",
+   "submission_period_dates": "Oct 17 - Nov 22, 2026",
+   "themes": [
+    {
+     "id": 23,
+     "name": "Beginner Friendly"
+    },
+    {
+     "id": 9,
+     "name": "Cybersecurity"
+    },
+    {
+     "id": 13,
+     "name": "Social Good"
+    }
+   ],
+   "prize_amount": "$<span data-currency-value>280</span>",
+   "prizes_counts": {
+    "cash": 1,
+    "other": 0
+   },
+   "registrations_count": 184,
+   "featured": false,
+   "organization_name": "SafeSpace",
+   "winners_announced": false,
+   "submission_gallery_url": "https://safespace-hacks.devpost.com/project-gallery",
+   "start_a_submission_url": "https://safespace-hacks.devpost.com/challenges/start_a_submission",
+   "invite_only": false,
+   "eligibility_requirement_invite_only_description": null,
+   "managed_by_devpost_badge": false
+  },
+  {
+   "id": 31789,
+   "title": "STEM2Connect AI Hackathon",
+   "displayed_location": {
+    "icon": "globe",
+    "location": "Online"
+   },
+   "open_state": "open",
+   "thumbnail_url": "//d112y698adiu2z.cloudfront.net/photos/production/challenge_thumbnails/005/600/935/datas/medium_square.png",
+   "analytics_identifier": "STEM2Connect AI Hackathon (31789)",
+   "url": "https://stem2connect-online-hackathon.devpost.com/",
+   "time_left_to_submission": "25 days left",
+   "submission_period_dates": "Oct 17 - Nov 21, 2026",
+   "themes": [
+    {
+     "id": 23,
+     "name": "Beginner Friendly"
+    },
+    {
+     "id": 19,
+     "name": "Education"
+    },
+    {
+     "id": 25,
+     "name": "Web"
+    }
+   ],
+   "prize_amount": "$<span data-currency-value>0</span>",
+   "prizes_counts": {
+    "cash": 0,
+    "other": 4
+   },
+   "registrations_count": 181,
+   "featured": false,
+   "organization_name": "STEM2Connect",
+   "winners_announced": false,
+   "submission_gallery_url": "https://stem2connect-online-hackathon.devpost.com/project-gallery",
+   "start_a_submission_url": "https://stem2connect-online-hackathon.devpost.com/challenges/start_a_submission",
+   "invite_only": false,
+   "eligibility_requirement_invite_only_description": null,
+   "managed_by_devpost_badge": false
+  },
+  {
+   "id": 30548,
+   "title": "HackFW: MADE Challenge",
+   "displayed_location": {
+    "icon": "map-marker-alt",
+    "location": "Fort Worth"
+   },
+   "open_state": "open",
+   "thumbnail_url": "//d112y698adiu2z.cloudfront.net/photos/production/challenge_thumbnails/005/018/511/datas/medium_square.png",
+   "analytics_identifier": "HackFW: MADE Challenge (30548)",
+   "url": "https://hackfw.devpost.com/",
+   "time_left_to_submission": "3 days left",
+   "submission_period_dates": "Oct 01 - 30, 2026",
+   "themes": [
+    {
+     "id": 7,
+     "name": "IoT"
+    },
+    {
+     "id": 6,
+     "name": "Machine Learning/AI"
+    },
+    {
+     "id": 27,
+     "name": "Robotic Process Automation"
+    }
+   ],
+   "prize_amount": "$<span data-currency-value>1,900</span>",
+   "prizes_counts": {
+    "cash": 3,
+    "other": 0
+   },
+   "registrations_count": 175,
+   "featured": false,
+   "organization_name": "Fort Worth DAO",
+   "winners_announced": false,
+   "submission_gallery_url": "https://hackfw.devpost.com/project-gallery",
+   "start_a_submission_url": "https://hackfw.devpost.com/challenges/start_a_submission",
+   "invite_only": false,
+   "eligibility_requirement_invite_only_description": null,
+   "managed_by_devpost_badge": false
+  }
+ ],
+ "meta": {
+  "total_count": 176,
+  "per_page": 9,
+  "fuzzy": false
+ }
+}
