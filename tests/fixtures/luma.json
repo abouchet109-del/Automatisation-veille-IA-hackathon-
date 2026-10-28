@@ -1,0 +1,881 @@
+{
+ "feed": {
+  "entries": [
+   {
+    "api_id": "evt-Gf2bZHB09VwvO5v",
+    "event": {
+     "api_id": "evt-Gf2bZHB09VwvO5v",
+     "calendar_api_id": "cal-qudVygmQRdEbrKC",
+     "cover_url": "https://images.lumacdn.com/uploads/zg/9120d8e9-cab3-476d-a58e-f7359c486454.png",
+     "end_at": "2026-10-28T20:30:00.000Z",
+     "event_type": "independent",
+     "hide_rsvp": true,
+     "location_type": "offline",
+     "name": "AI & Positive Impact",
+     "one_to_one": true,
+     "recurrence_id": null,
+     "show_guest_list": true,
+     "social_image_url": "https://images.lumacdn.com/event-social/lq/fc478d9b-3750-44fa-9cb7-e1b7f96abd16.png",
+     "start_at": "2026-10-28T18:00:00.000Z",
+     "timezone": "Europe/Paris",
+     "url": "f30y4omv",
+     "user_api_id": "usr-FCVI1RvVZUmtzow",
+     "visibility": "public",
+     "virtual_info": {
+      "has_access": false
+     },
+     "geo_address_info": {
+      "city": "Paris",
+      "type": "google",
+      "region": "Île-de-France",
+      "address": "42 Paris",
+      "country": "France",
+      "place_id": "ChIJ9x4656lv5kcRgqM23RKIgE4",
+      "localized": {
+       "fr": {
+        "city": "Paris",
+        "region": "Île-de-France",
+        "address": "École 42",
+        "country": "France",
+        "city_state": "Paris, France",
+        "sublocality": "Porte de Clichy",
+        "full_address": "École 42, 96 Bd Bessières, 75017 Paris, France",
+        "region_short": "IDF",
+        "short_address": "96 Bd Bessières, Paris"
+       }
+      },
+      "city_state": "Paris, France",
+      "description": "Damogran Room, 3rd floor",
+      "sublocality": "Porte de Clichy",
+      "country_code": "FR",
+      "full_address": "42 Paris, 96 Bd Bessières, 75017 Paris, France",
+      "region_short": "IDF",
+      "short_address": "96 Bd Bessières, Paris",
+      "place_coordinate": {
+       "latitude": 48.896487,
+       "longitude": 2.318483
+      },
+      "apple_maps_place_id": "IEC627173D5108F03",
+      "mode": "shown"
+     },
+     "geo_address_visibility": "public",
+     "coordinate": {
+      "longitude": 2.318483,
+      "latitude": 48.896487
+     },
+     "waitlist_enabled": false,
+     "waitlist_status": "disabled"
+    },
+    "cover_image": {
+     "colors": [
+      "#ffffff",
+      "#0a0909",
+      "#40d9eb",
+      "#9e684c"
+     ],
+     "palette": {
+      "neutral": [
+       {
+        "color": "#0a0909",
+        "percentage": 6.81
+       },
+       {
+        "color": "#ffffff",
+        "percentage": 67.51
+       }
+      ],
+      "vibrant": [
+       {
+        "color": "#40d9eb",
+        "percentage": 6.65
+       },
+       {
+        "color": "#9aa357",
+        "percentage": 0.72
+       },
+       {
+        "color": "#9e684c",
+        "percentage": 1.25
+       }
+      ]
+     }
+    },
+    "calendar": {
+     "access_level": "public",
+     "api_id": "cal-qudVygmQRdEbrKC",
+     "avatar_url": "https://cdn.lu.ma/avatars-default/community_avatar_9.png",
+     "coordinate": null,
+     "cover_image_url": null,
+     "description_short": null,
+     "end_date": null,
+     "event_submission_restriction": "open",
+     "google_measurement_id": null,
+     "instagram_handle": null,
+     "is_blocked": false,
+     "is_verified": false,
+     "launch_status": "launched",
+     "linkedin_handle": null,
+     "location": null,
+     "luma_plan": "free",
+     "luma_plus_active": false,
+     "meta_pixel_id": null,
+     "name": "Personal",
+     "personal_user_api_id": "usr-FCVI1RvVZUmtzow",
+     "refund_policy": null,
+     "sends_unlocked_at": "2026-03-08T15:26:03.032Z",
+     "slug": null,
+     "social_image_url": null,
+     "start_date": null,
+     "stripe_account_id": null,
+     "tax_config": null,
+     "tiktok_handle": null,
+     "tint_color": "#de3163",
+     "track_meta_ads_from_luma": false,
+     "twitter_handle": null,
+     "website": null,
+     "youtube_handle": null,
+     "is_personal": true,
+     "personal_user": {
+      "api_id": "usr-FCVI1RvVZUmtzow",
+      "avatar_url": "https://images.lumacdn.com/uploads/2v/509d3cf3-481f-4b5c-bea1-5b16a8d63528.png",
+      "bio_short": "42 students' AI providers #MachineLearning #DeepLearning #Python #Born2Code #AiLovers",
+      "first_name": "CM",
+      "last_name": "42AI",
+      "instagram_handle": "_42AI_",
+      "is_verified": false,
+      "linkedin_handle": "/company/42-artificial-intelligence",
+      "name": "42 Artificial Intelligence",
+      "tiktok_handle": null,
+      "timezone": "Europe/Paris",
+      "twitter_handle": "42AI_",
+      "username": "42AI",
+      "website": "https://42-AI.github.io",
+      "youtube_handle": "42AI_"
+     },
+     "timezone": null
+    },
+    "start_at": "2026-10-28T18:00:00.000Z",
+    "hosts": [
+     {
+      "api_id": "usr-FCVI1RvVZUmtzow",
+      "avatar_url": "https://images.lumacdn.com/uploads/2v/509d3cf3-481f-4b5c-bea1-5b16a8d63528.png",
+      "bio_short": "42 students' AI providers #MachineLearning #DeepLearning #Python #Born2Code #AiLovers",
+      "first_name": "CM",
+      "last_name": "42AI",
+      "instagram_handle": "_42AI_",
+      "is_verified": false,
+      "linkedin_handle": "/company/42-artificial-intelligence",
+      "name": "42 Artificial Intelligence",
+      "tiktok_handle": null,
+      "timezone": "Europe/Paris",
+      "twitter_handle": "42AI_",
+      "username": "42AI",
+      "website": "https://42-AI.github.io",
+      "youtube_handle": "42AI_"
+     }
+    ],
+    "guest_count": 158,
+    "ticket_count": 158,
+    "ticket_info": {
+     "price": null,
+     "is_free": true,
+     "max_price": null,
+     "is_sold_out": false,
+     "spots_remaining": null,
+     "is_near_capacity": false,
+     "require_approval": false
+    },
+    "registration_availability": "sold-out",
+    "manager_info": null,
+    "guest_info": null,
+    "host_info": null,
+    "waitlist_active": false,
+    "featured_city": {
+     "api_id": "discplace-NdLrh1xJfeotJZC",
+     "name": "Paris",
+     "slug": "paris"
+    }
+   },
+   {
+    "api_id": "evt-cQE6HSoYAsRauAk",
+    "event": {
+     "api_id": "evt-cQE6HSoYAsRauAk",
+     "calendar_api_id": "cal-mHkxI954cF36TVI",
+     "cover_url": "https://images.lumacdn.com/uploads/8o/ef7d607b-ade5-4425-bdcf-08cc41d45ce5.gif",
+     "end_at": "2026-11-01T19:00:00.000Z",
+     "event_type": "independent",
+     "hide_rsvp": false,
+     "location_type": "offline",
+     "name": "Horror Demo Night - Generathon #3 × Paris Creator Week",
+     "one_to_one": true,
+     "recurrence_id": null,
+     "show_guest_list": false,
+     "social_image_url": "https://images.lumacdn.com/event-social/e8/92281985-1df6-44d4-9f58-f6370523f6bc.png",
+     "start_at": "2026-11-01T15:00:00.000Z",
+     "timezone": "Europe/Paris",
+     "url": "5dumglvo",
+     "user_api_id": "usr-SJUDoMO4UAq5xZE",
+     "visibility": "public",
+     "virtual_info": {
+      "has_access": false
+     },
+     "geo_address_info": {
+      "city": "Paris",
+      "type": "google",
+      "region": "Île-de-France",
+      "address": "La Cristallerie",
+      "country": "France",
+      "place_id": "ChIJ5w-Wg49v5kcRWqnVAF4W0k8",
+      "localized": {
+       "fr": {
+        "city": "Paris",
+        "region": "Île-de-France",
+        "address": "La Cristallerie",
+        "country": "France",
+        "city_state": "Paris, France",
+        "sublocality": "Porte Saint-Denis",
+        "full_address": "La Cristallerie, 12 Rue Martel, 75010 Paris, France",
+        "region_short": "IDF",
+        "short_address": "12 Rue Martel, Paris"
+       }
+      },
+      "city_state": "Paris, France",
+      "description": "",
+      "sublocality": "Porte-Saint-Denis",
+      "country_code": "FR",
+      "full_address": "La Cristallerie, 12 Rue Martel, 75010 Paris, France",
+      "region_short": "IDF",
+      "short_address": "12 Rue Martel, Paris",
+      "place_coordinate": {
+       "latitude": 48.874221,
+       "longitude": 2.3538796
+      },
+      "apple_maps_place_id": null,
+      "mode": "shown"
+     },
+     "geo_address_visibility": "public",
+     "coordinate": {
+      "longitude": 2.3538796,
+      "latitude": 48.874221
+     },
+     "waitlist_enabled": true,
+     "waitlist_status": "active"
+    },
+    "cover_image": {
+     "colors": [
+      "#000000",
+      "#fbfbfa",
+      "#b2653d",
+      "#68279d"
+     ],
+     "palette": {
+      "neutral": [
+       {
+        "color": "#000000",
+        "percentage": 83.96
+       },
+       {
+        "color": "#fbfbfa",
+        "percentage": 5.28
+       }
+      ],
+      "vibrant": [
+       {
+        "color": "#68279d",
+        "percentage": 0.37
+       },
+       {
+        "color": "#81934e",
+        "percentage": 0.33
+       },
+       {
+        "color": "#b2653d",
+        "percentage": 0.61
+       }
+      ]
+     }
+    },
+    "calendar": {
+     "access_level": "public",
+     "api_id": "cal-mHkxI954cF36TVI",
+     "avatar_url": "https://images.lumacdn.com/uploads/fw/58a676dd-9ed9-4edc-b1fc-8f96906407e9.png",
+     "coordinate": null,
+     "cover_image_url": "https://images.lumacdn.com/uploads/27/60327bff-79b5-4cce-8c18-5ebc12672a91.png",
+     "description_short": "Generathon is the world's first IRL hackathon dedicated to AI content creation.\nWe empower AI creatives to produce exceptional content based on creative briefs, using the best tools on the market.",
+     "end_date": null,
+     "event_submission_restriction": "open",
+     "google_measurement_id": null,
+     "instagram_handle": "generathon",
+     "is_blocked": false,
+     "is_verified": false,
+     "launch_status": "launched",
+     "linkedin_handle": "/company/generathon",
+     "location": null,
+     "luma_plan": "free",
+     "luma_plus_active": false,
+     "meta_pixel_id": null,
+     "name": "Generathon - The future of content creation",
+     "personal_user_api_id": null,
+     "refund_policy": null,
+     "sends_unlocked_at": "2026-08-23T15:46:46.726Z",
+     "slug": "generathon",
+     "social_image_url": "https://images.lumacdn.com/uploads/9t/c0fe8d5b-7013-4f53-8f51-84f9a2c5facf.png",
+     "start_date": null,
+     "stripe_account_id": null,
+     "tax_config": null,
+     "tiktok_handle": null,
+     "tint_color": "#F8712B",
+     "track_meta_ads_from_luma": false,
+     "twitter_handle": "generathontech",
+     "website": "https://generathon.tech",
+     "youtube_handle": null,
+     "is_personal": false,
+     "personal_user": null,
+     "timezone": null
+    },
+    "start_at": "2026-11-01T15:00:00.000Z",
+    "hosts": [
+     {
+      "api_id": "usr-SJUDoMO4UAq5xZE",
+      "avatar_url": "https://images.lumacdn.com/avatars/dg/93d5c640-b386-4752-929e-d0050ac015b3.png",
+      "bio_short": "We Are Founders • Generathon • HEC Paris",
+      "first_name": "Roland",
+      "last_name": "Sosin",
+      "instagram_handle": "wearefounders_",
+      "is_verified": false,
+      "linkedin_handle": "/in/roland-sosin",
+      "name": "Roland Sosin",
+      "tiktok_handle": null,
+      "timezone": "Europe/Paris",
+      "twitter_handle": "generathontech",
+      "username": "rol",
+      "website": "https://generathon.tech",
+      "youtube_handle": null
+     }
+    ],
+    "guest_count": 0,
+    "ticket_count": 0,
+    "ticket_info": {
+     "price": null,
+     "is_free": true,
+     "max_price": null,
+     "is_sold_out": false,
+     "spots_remaining": 79,
+     "is_near_capacity": false,
+     "require_approval": true
+    },
+    "registration_availability": "open",
+    "manager_info": null,
+    "guest_info": null,
+    "host_info": null,
+    "waitlist_active": false,
+    "featured_city": {
+     "api_id": "discplace-NdLrh1xJfeotJZC",
+     "name": "Paris",
+     "slug": "paris"
+    }
+   },
+   {
+    "api_id": "evt-DUJsmWZeCMAMyn8",
+    "event": {
+     "api_id": "evt-DUJsmWZeCMAMyn8",
+     "calendar_api_id": "cal-VjXI0S2I0nE3wHW",
+     "cover_url": "https://images.lumacdn.com/uploads/ab/55d0e300-c7bc-4be2-b919-f9d1657e6f21.jpg",
+     "end_at": "2026-11-10T19:00:00.000Z",
+     "event_type": "independent",
+     "hide_rsvp": false,
+     "location_type": "offline",
+     "name": "BNB Builder Sessions, Paris🇫🇷",
+     "one_to_one": true,
+     "recurrence_id": null,
+     "show_guest_list": true,
+     "social_image_url": "https://images.lumacdn.com/event-social/u6/52db80b4-c879-4869-b9c6-97de233f5662.png",
+     "start_at": "2026-11-10T16:30:00.000Z",
+     "timezone": "Europe/Paris",
+     "url": "0wcr8wu7",
+     "user_api_id": "usr-HAioCyvmra2dEUU",
+     "visibility": "public",
+     "virtual_info": {
+      "has_access": false
+     },
+     "geo_address_info": {
+      "city": "Nanterre",
+      "type": "google",
+      "region": "Île-de-France",
+      "address": "IIM - Institute of Internet and Multimedia",
+      "country": "France",
+      "place_id": "ChIJEzYCSABl5kcR6XG7H7PwsFQ",
+      "localized": {
+       "fr": {
+        "city": "Nanterre",
+        "region": "Île-de-France",
+        "address": "IIM - Digital School Paris",
+        "country": "France",
+        "city_state": "Nanterre, France",
+        "sublocality": null,
+        "full_address": "IIM - Digital School Paris, 47 Bd de Pesaro, 92000 Nanterre, France",
+        "region_short": "IDF",
+        "short_address": "47 Bd de Pesaro, Nanterre"
+       }
+      },
+      "city_state": "Nanterre, France",
+      "description": "",
+      "sublocality": null,
+      "country_code": "FR",
+      "full_address": "IIM - Institute of Internet and Multimedia, 47 Bd de Pesaro, 92000 Nanterre, France",
+      "region_short": "IDF",
+      "short_address": "47 Bd de Pesaro, Nanterre",
+      "place_coordinate": {
+       "latitude": 48.893571699999995,
+       "longitude": 2.2269574
+      },
+      "apple_maps_place_id": "IE4D5A5BDE242B804",
+      "mode": "shown"
+     },
+     "geo_address_visibility": "public",
+     "coordinate": {
+      "longitude": 2.2269574,
+      "latitude": 48.893571699999995
+     },
+     "waitlist_enabled": true,
+     "waitlist_status": "active"
+    },
+    "cover_image": {
+     "colors": [
+      "#000000",
+      "#f0b90f",
+      "#fbfbfb"
+     ],
+     "palette": {
+      "neutral": [
+       {
+        "color": "#000000",
+        "percentage": 85.48
+       },
+       {
+        "color": "#fbfbfb",
+        "percentage": 0.38
+       }
+      ],
+      "vibrant": [
+       {
+        "color": "#f0b90f",
+        "percentage": 9.28
+       }
+      ]
+     }
+    },
+    "calendar": {
+     "access_level": "public",
+     "api_id": "cal-VjXI0S2I0nE3wHW",
+     "avatar_url": "https://cdn.lu.ma/avatars-default/community_avatar_12.png",
+     "coordinate": null,
+     "cover_image_url": null,
+     "description_short": null,
+     "end_date": null,
+     "event_submission_restriction": "open",
+     "google_measurement_id": null,
+     "instagram_handle": null,
+     "is_blocked": false,
+     "is_verified": false,
+     "launch_status": "launched",
+     "linkedin_handle": null,
+     "location": null,
+     "luma_plan": "free",
+     "luma_plus_active": false,
+     "meta_pixel_id": null,
+     "name": "Personal",
+     "personal_user_api_id": "usr-HAioCyvmra2dEUU",
+     "refund_policy": null,
+     "sends_unlocked_at": "2026-09-09T13:13:44.831Z",
+     "slug": null,
+     "social_image_url": null,
+     "start_date": null,
+     "stripe_account_id": null,
+     "tax_config": null,
+     "tiktok_handle": null,
+     "tint_color": "#F31A7C",
+     "track_meta_ads_from_luma": false,
+     "twitter_handle": null,
+     "website": null,
+     "youtube_handle": null,
+     "is_personal": true,
+     "personal_user": {
+      "api_id": "usr-HAioCyvmra2dEUU",
+      "avatar_url": "https://images.lumacdn.com/avatars/qf/067dfad1-622f-4cb8-b76a-971b0d450d92.jpg",
+      "bio_short": "",
+      "first_name": "Chibani",
+      "last_name": "Ramzy",
+      "instagram_handle": null,
+      "is_verified": false,
+      "linkedin_handle": "/in/ramzychibani",
+      "name": "Ramzy",
+      "tiktok_handle": null,
+      "timezone": "Europe/Paris",
+      "twitter_handle": "its_zyram",
+      "username": "ramzy_bnb",
+      "website": null,
+      "youtube_handle": null
+     },
+     "timezone": null
+    },
+    "start_at": "2026-11-10T16:30:00.000Z",
+    "hosts": [
+     {
+      "api_id": "usr-HAioCyvmra2dEUU",
+      "avatar_url": "https://images.lumacdn.com/avatars/qf/067dfad1-622f-4cb8-b76a-971b0d450d92.jpg",
+      "bio_short": "",
+      "first_name": "Chibani",
+      "last_name": "Ramzy",
+      "instagram_handle": null,
+      "is_verified": false,
+      "linkedin_handle": "/in/ramzychibani",
+      "name": "Ramzy",
+      "tiktok_handle": null,
+      "timezone": "Europe/Paris",
+      "twitter_handle": "its_zyram",
+      "username": "ramzy_bnb",
+      "website": null,
+      "youtube_handle": null
+     }
+    ],
+    "guest_count": 66,
+    "ticket_count": 66,
+    "ticket_info": {
+     "price": null,
+     "is_free": true,
+     "max_price": null,
+     "is_sold_out": true,
+     "spots_remaining": 0,
+     "is_near_capacity": false,
+     "require_approval": true
+    },
+    "registration_availability": "waitlist",
+    "manager_info": null,
+    "guest_info": null,
+    "host_info": null,
+    "waitlist_active": true,
+    "featured_city": {
+     "api_id": "discplace-NdLrh1xJfeotJZC",
+     "name": "Paris",
+     "slug": "paris"
+    }
+   }
+  ],
+  "has_more": false
+ },
+ "details": {
+  "evt-cQE6HSoYAsRauAk": {
+   "description_mirror": {
+    "type": "doc",
+    "content": [
+     {
+      "type": "paragraph",
+      "content": [
+       {
+        "text": "An Evening of AI Creation: Horror Demo Night",
+        "type": "text",
+        "marks": [
+         {
+          "type": "bold"
+         }
+        ]
+       },
+       {
+        "text": " of ",
+        "type": "text"
+       },
+       {
+        "text": "Generathon #3",
+        "type": "text",
+        "marks": [
+         {
+          "type": "bold"
+         }
+        ]
+       },
+       {
+        "text": "⚡",
+        "type": "text"
+       }
+      ]
+     },
+     {
+      "type": "paragraph",
+      "content": [
+       {
+        "text": "This evening is especially for people curious to see what's possible when you give visionary creators and developers just 24 hours to redefine generative AI.",
+        "type": "text"
+       }
+      ]
+     },
+     {
+      "type": "paragraph",
+      "content": [
+       {
+        "text": "Brought to you by ",
+        "type": "text"
+       },
+       {
+        "text": "Le Motif",
+        "type": "text",
+        "marks": [
+         {
+          "type": "link",
+          "attrs": {
+           "href": "https://www.instagram.com/levraimotif/"
+          }
+         }
+        ]
+       },
+       {
+        "text": ", an AI creative & content creator, and by ",
+        "type": "text"
+       },
+       {
+        "text": "roland.builds",
+        "type": "text",
+        "marks": [
+         {
+          "type": "link",
+          "attrs": {
+           "href": "https://www.instagram.com/roland.builds/"
+          }
+         }
+        ]
+       },
+       {
+        "text": ", the Generathon is the place to be, where AI artists, video creators, and storytellers come together to push what's possible when creativity meets frontier models.",
+        "type": "text"
+       }
+      ]
+     },
+     {
+      "type": "paragraph",
+      "content": [
+       {
+        "text": "Teams have been competing all weekend to build the future of AI creativity. The absolute best of them will be presenting their work live on stage across two categories: Three Minutes to Scare - Short horror film format, and Sell the Fear - Ad format.",
+        "type": "text"
+       }
+      ]
+     },
+     {
+      "type": "paragraph",
+      "content": [
+       {
+        "text": "The content you'll see is packed with spooky surprises and creepy vibes. If you scare easily, this is your official cue to turn back 🙀",
+        "type": "text"
+       }
+      ]
+     },
+     {
+      "type": "paragraph",
+      "content": [
+       {
+        "text": "(Want to build instead of just watching? The actual Generathon runs from Saturday to Sunday. ",
+        "type": "text",
+        "marks": [
+         {
+          "type": "italic"
+         }
+        ]
+       },
+       {
+        "text": "[",
+        "type": "text",
+        "marks": [
+         {
+          "type": "italic"
+         },
+         {
+          "type": "bold"
+         }
+        ]
+       },
+       {
+        "text": "Click here to register as a participant!",
+        "type": "text",
+        "marks": [
+         {
+          "type": "link",
+          "attrs": {
+           "href": "https://luma.com/leomxba2?utm_source=luma_demo_night"
+          }
+         },
+         {
+          "type": "italic"
+         },
+         {
+          "type": "bold"
+         }
+        ]
+       },
+       {
+        "text": "]",
+        "type": "text",
+        "marks": [
+         {
+          "type": "italic"
+         },
+         {
+          "type": "bold"
+         }
+        ]
+       },
+       {
+        "text": ")",
+        "type": "text",
+        "marks": [
+         {
+          "type": "italic"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "paragraph",
+      "content": [
+       {
+        "text": "Schedule",
+        "type": "text",
+        "marks": [
+         {
+          "type": "bold"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "paragraph",
+      "content": [
+       {
+        "text": "🕖 16:00",
+        "type": "text",
+        "marks": [
+         {
+          "type": "bold"
+         }
+        ]
+       },
+       {
+        "text": " - Doors open, arrival & drinks",
+        "type": "text"
+       }
+      ]
+     },
+     {
+      "type": "paragraph",
+      "content": [
+       {
+        "text": "🎤 16:30",
+        "type": "text",
+        "marks": [
+         {
+          "type": "bold"
+         }
+        ]
+       },
+       {
+        "text": " - Kick-off",
+        "type": "text"
+       }
+      ]
+     },
+     {
+      "type": "paragraph",
+      "content": [
+       {
+        "text": "🎬 17:30-18:00",
+        "type": "text",
+        "marks": [
+         {
+          "type": "bold"
+         }
+        ]
+       },
+       {
+        "text": " - Live Demos & Screenings (Short films, viral formats, and AI tools)",
+        "type": "text"
+       }
+      ]
+     },
+     {
+      "type": "paragraph",
+      "content": [
+       {
+        "text": "🏆 18:30",
+        "type": "text",
+        "marks": [
+         {
+          "type": "bold"
+         }
+        ]
+       },
+       {
+        "text": " - Winners announced!",
+        "type": "text"
+       }
+      ]
+     },
+     {
+      "type": "paragraph",
+      "content": [
+       {
+        "text": "🍸 19:00 –20:00",
+        "type": "text",
+        "marks": [
+         {
+          "type": "bold"
+         }
+        ]
+       },
+       {
+        "text": " - Food & networking",
+        "type": "text"
+       }
+      ]
+     },
+     {
+      "type": "paragraph",
+      "content": [
+       {
+        "text": "Thanks to our host ",
+        "type": "text"
+       },
+       {
+        "text": "@",
+        "type": "text",
+        "marks": [
+         {
+          "type": "bold"
+         }
+        ]
+       },
+       {
+        "text": "Hexa",
+        "type": "text",
+        "marks": [
+         {
+          "type": "link",
+          "attrs": {
+           "href": "https://hexa.com?utm_source=luma_generathon"
+          }
+         },
+         {
+          "type": "bold"
+         }
+        ]
+       },
+       {
+        "text": ", the best startup studio, for making this second edition possible! And thanks to our partners for making Generathon #3 × Paris Creator Week possible.",
+        "type": "text"
+       }
+      ]
+     }
+    ]
+   }
+  }
+ }
+}

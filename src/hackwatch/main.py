@@ -6,11 +6,11 @@ import sys
 
 from hackwatch import filters, llm, notify, scoring
 from hackwatch.models import Hackathon
-from hackwatch.sources import ctftime, devpost
+from hackwatch.sources import ctftime, devpost, luma
 from hackwatch.scoring import Scored
 from hackwatch.store import Store
 
-SOURCES = {"devpost": devpost.fetch, "ctftime": ctftime.fetch}
+SOURCES = {"devpost": devpost.fetch, "ctftime": ctftime.fetch, "luma": luma.fetch}
 
 
 def collect() -> list[Hackathon]:
