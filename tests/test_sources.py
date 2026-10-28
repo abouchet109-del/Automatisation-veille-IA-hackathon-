@@ -3,7 +3,7 @@ from datetime import datetime
 from pathlib import Path
 
 from hackwatch import filters
-from hackwatch.sources import agorize, ctftime, devfolio, devpost, lablab, luma, mlh
+from hackwatch.sources import agorize, ctftime, devfolio, devpost, lablab, luma, mlh, unstop
 
 FX = Path(__file__).parent / "fixtures"
 
@@ -136,3 +136,19 @@ def test_devfolio_parse():
 def test_devfolio_registration_closed():
     page = (FX / "devfolio.html").read_text(encoding="utf-8")
     assert not any(h.registration_open for h in devfolio.parse(page, now=datetime(2027, 6, 1)))
+
+
+def test_unstop_parse():
+    items = unstop.parse(load("unstop.json"), now=datetime(2026, 10, 28))
+    assert len(items) == 4
+    online = [h for h in items if h.is_online]
+    assert len(online) == 2 and all(h.location == "Online" for h in online)
+    assert all(h.registration_open and h.url.startswith("https://unstop.com/") for h in items)
+    assert any(h.prize for h in items) and all("<" not in h.description for h in items)
+    # présentiel / hybride : lieu brut, jamais marqués en ligne
+    assert all(not h.is_online and h.location for h in items if h not in online)
+    assert [h.is_online for h in items if filters.keep(h)] == [True, True]
+
+
+def test_unstop_registration_closed():
+    assert not any(h.registration_open for h in unstop.parse(load("unstop.json"), now=datetime(2027, 6, 1)))
