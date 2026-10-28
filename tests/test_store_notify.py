@@ -1,5 +1,6 @@
 from hackwatch.models import Hackathon
 from hackwatch.notify import build_message
+from hackwatch.scoring import Scored
 from hackwatch.store import Store
 
 
@@ -23,6 +24,6 @@ def test_dry_run_does_not_mark(tmp_path):
 
 
 def test_message_escapes_html():
-    m = build_message([hk("https://a.b")], "a@b.c", "d@e.f")
+    m = build_message([Scored(hk("https://a.b"), 0.7, "ia_technique", ["r"])], "a@b.c", "d@e.f", 4)
     body = m.get_body(("html",)).get_content()
-    assert "&lt;b&gt;" in body and "https://a.b" in body
+    assert "&lt;b&gt;" in body and "https://a.b" in body and "4 autres hackathons sous le seuil" in body
