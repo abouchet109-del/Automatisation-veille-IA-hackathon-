@@ -38,14 +38,17 @@ def dedupe(items: list[Hackathon]) -> list[Hackathon]:
     return out
 
 
-def collect() -> list[Hackathon]:
+def collect() -> tuple[list[Hackathon], list[str]]:
+    """Renvoie les hackathons dédoublonnés et les noms des sources en échec."""
     items: list[Hackathon] = []
+    failed: list[str] = []
     for name, fetch in SOURCES.items():
         try:
             items += fetch()
         except Exception as e:  # une source cassée ne bloque pas les autres
+            failed.append(name)
             print(f"[warn] source {name} en échec : {e}", file=sys.stderr)
-    return dedupe(items)
+    return dedupe(items), failed
 
 
 def load_profile(path: str = "profile.json") -> dict:
@@ -69,7 +72,11 @@ def main(argv: list[str] | None = None) -> int:
     profile = load_profile()
     notif = profile["notification"]
     score_min = notif["score_min"]
-    kept = [h for h in collect() if filters.keep(h)]
+    items, failed = collect()
+    if len(failed) == len(SOURCES):
+        print("Toutes les sources sont en échec.", file=sys.stderr)
+        return 1
+    kept = [h for h in items if filters.keep(h)]
     store = Store()
     try:
         new = store.new_items(kept)  # n'écrit que first_seen, jamais sent_at
@@ -90,7 +97,7 @@ def main(argv: list[str] | None = None) -> int:
         if not to_send:
             print(f"Rien de pertinent ({len(below)} sous le seuil).")
             return 0
-        notify.send(to_send, len(below))
+        notify.send(to_send, len(below), failed)
         store.mark_sent([s.hackathon for s in to_send])  # les sous-seuil restent non envoyés
         print(f"{len(to_send)} hackathons envoyés.")
         return 0

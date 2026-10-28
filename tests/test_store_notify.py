@@ -27,3 +27,16 @@ def test_message_escapes_html():
     m = build_message([Scored(hk("https://a.b"), 0.7, "ia_technique", ["r"])], "a@b.c", "d@e.f", 4)
     body = m.get_body(("html",)).get_content()
     assert "&lt;b&gt;" in body and "https://a.b" in body and "4 autres hackathons sous le seuil" in body
+
+
+def test_store_path_from_env(tmp_path, monkeypatch):
+    monkeypatch.setenv("HACKWATCH_DB", str(tmp_path / "env.db"))
+    Store().close()
+    assert (tmp_path / "env.db").exists()
+
+
+def test_message_shows_failed_sources():
+    s = [Scored(hk("https://a.b"), 0.7, "ia_technique", ["r"])]
+    body = build_message(s, "a@b.c", "d@e.f", 0, ["luma", "mlh"]).get_body(("html",)).get_content()
+    assert "Sources en échec : luma, mlh" in body
+    assert "Sources en échec" not in build_message(s, "a@b.c", "d@e.f").get_body(("html",)).get_content()

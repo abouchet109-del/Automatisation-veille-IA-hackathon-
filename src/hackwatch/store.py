@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import os
 import sqlite3
 from datetime import datetime, timezone
 
@@ -16,7 +17,8 @@ CREATE TABLE IF NOT EXISTS hackathons (
 
 
 class Store:
-    def __init__(self, path: str = "hackwatch.db"):
+    def __init__(self, path: str | None = None):
+        path = path or os.environ.get("HACKWATCH_DB", "hackwatch.db")
         self.db = sqlite3.connect(path)
         self.db.execute(SCHEMA)
 
