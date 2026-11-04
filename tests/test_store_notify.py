@@ -1,3 +1,5 @@
+from email.utils import getaddresses
+
 from hackwatch.models import Hackathon
 from hackwatch.notify import build_message
 from hackwatch.scoring import Scored
@@ -40,3 +42,9 @@ def test_message_shows_failed_sources():
     body = build_message(s, "a@b.c", "d@e.f", [], ["luma", "mlh"]).get_body(("html",)).get_content()
     assert "Sources en échec : luma, mlh" in body
     assert "Sources en échec" not in build_message(s, "a@b.c", "d@e.f").get_body(("html",)).get_content()
+
+
+def test_message_several_recipients():
+    # EMAIL_TO accepte plusieurs adresses séparées par des virgules
+    msg = build_message([], "a@b.c", "d@e.f, g@h.i")
+    assert [a for _, a in getaddresses(msg.get_all("To"))] == ["d@e.f", "g@h.i"]
