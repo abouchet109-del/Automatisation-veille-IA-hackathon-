@@ -13,9 +13,7 @@ Plan de travail par phases : `PLAN.md`. Une session = une phase.
 - `models.py` : dataclass `Hackathon` (modèle commun à toutes les sources).
 - `sources/<nom>.py` : une source = `fetch() -> list[Hackathon]` + `parse(data)` pur et testable.
 - `scoring.py` : `score(h, profile)` (axes, bonus, malus) et `select` (seuil, 15 max, 3 CTFtime max).
-  - Par axe : somme des mots-clés trouvés, × 1 si dans le titre, 0,6 dans les tags, 0,5 dans la description ; un mot de `mots_generiques` vaut 0,4 d'un mot de `mots_cles`. Axe = poids × (1 − e^(−somme/1,2)) : progressif, jamais saturé.
-  - Score = meilleur axe + 0,05 par autre axe ≥ 0,2 (max 0,1) + présentiel Paris/IDF 0,15 + format generathon/buildathon/datathon/ideathon 0,05 + prize ≥ 1 k 0,05 / ≥ 10 k 0,1 + débutant 0,05 ; − 0,5 éligibilité incompatible, − 0,3 qualification hors Paris/IDF.
-  - Casse : mot en minuscules = insensible + pluriel ; acronyme ou marque (« AI », « Meta ») = casse exacte ou TOUT MAJUSCULES.
+  - Poids, bonus, malus et règle de casse : constantes et docstrings de `scoring.py` (les lire là, ne pas les recopier ici).
 - `llm.py` : re-scoring optionnel Claude Haiku, actif seulement si `ANTHROPIC_API_KEY` (extra `[llm]`).
 - `filters.py` : inscriptions ouvertes ET (en ligne, hybride compris, OU présentiel Paris / Île-de-France) ; comparaison sans accents, homonymes hors IDF exclus.
 - `store.py` : SQLite `hackwatch.db`, dédoublonnage par URL, trace des envois.
